@@ -1,1 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bathkit — Branded Bathroom Fittings &amp; Sanitaryware in Kolkata</title>
+  <style>
+    :root {
+      --bg: #f6f8fa;
+      --surface: #ffffff;
+      --surface-alt: #eef3f7;
+      --ink: #13222c;
+      --muted: #526470;
+      --accent: #0f6b78;
+      --accent-dark: #0a4d57;
+      --border: #dce4ea;
+      --radius: 12px;
+      --shadow: 0 8px 24px rgba(19, 34, 44, 0.06);
+    }
 
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header / Nav */
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 68px;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--accent-dark);
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #ffffff;
+      padding: 11px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: background 0.2s ease;
+    }
+
+    .btn:hover {
+      background: var(--accent-dark);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--accent-dark);
+      border: 1px solid var(--accent);
+    }
+
+    .btn-outline:hover {
+      background: var(--surface-alt);
+    }
+
+    /* Hero */
+    .hero {
+      padding: 64px 0 48px;
+      background: linear-gradient(180deg, var(--surface) 0%, var(--bg) 100%);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--surface-alt);
+      color: var(--accent-dark);
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-radius: 999px;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
+      max-width: 760px;
+    }
+
+    .hero p {
+      font-size: 1.08rem;
+      color: var(--muted);
+      max-width: 660px;
+      margin-bottom: 24px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    /* Sections */
+    section {
+      padding: 52px 0;
+    }
+
+    .section-title {
+      font-size: 1.55rem;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+
+    .section-sub {
+      color: var(--muted);
+      margin-bottom: 28px;
+      font-size: 0.98rem;
+    }
+
+    /* Grid Cards */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 20px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .card h3 {
+      font-size: 1.12rem;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    /* Reviews */
+    .stars {
+      color: #d9820b;
+      font-size: 0.95rem;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    .quote {
+      font-style: italic;
+      color: var(--ink);
+      margin-bottom: 14px;
+    }
+
+    .reviewer {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--accent-dark);
+    }
+
+    /* Visit / Info */
+    .info-list {
+      list-style: none;
+      display: grid;
+      gap: 14px;
+    }
+
+    .info-list li {
+      font-size: 0.96rem;
+      color: var(--ink);
+    }
+
+    .info-label {
+      font-weight: 700;
+      display: block;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--muted);
+      margin-bottom: 2px;
+    }
+
+    footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 28px 0;
+      margin-top: 24px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav-inner">
+      <a href="#" class="brand">Bathkit</a>
+      <nav aria-label="Primary Navigation">
+        <a href="#offerings">Collection</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#visit">Visit Us</a>
+      </nav>
+      <a href="tel:03340011140" class="btn">Call 033 4001 1140</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <span class="badge">Haltu · Purbachal Main Road, Kolkata</span>
+        <h1>Branded Bathroom Fittings &amp; Sanitaryware</h1>
+        <p>
+          A dedicated bathroom supply store featuring an extensive collection of branded fittings,
+          sanitaryware, and attentive showroom guidance in Sukhpally, Haltu.
+        </p>
+        <div class="hero-actions">
+          <a href="#visit" class="btn">Get Directions &amp; Hours</a>
+          <a href="tel:03340011140" class="btn btn-outline">Speak With the Showroom</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="offerings">
+      <div class="container">
+        <h2 class="section-title">What You Can Expect</h2>
+        <p class="section-sub">
+          Thoughtfully curated options and helpful in-store support for home builds and renovations.
+        </p>
+        <div class="grid-3">
+          <div class="card">
+            <h3>Branded Bath Fittings</h3>
+            <p>
+              Wide range of branded faucets, mixers, showers, and bathroom hardware selected for
+              everyday durability and finish.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Sanitaryware Collection</h3>
+            <p>
+              Explore clean, practical sanitaryware options suited for modern residences, compact
+              baths, and full upgrades.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Helpful Showroom Service</h3>
+            <p>
+              Courteous, well-informed staff ready to help you compare product ranges and plan your
+              bathroom setup comfortably.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews">
+      <div class="container">
+        <h2 class="section-title">Customer Reviews</h2>
+        <p class="section-sub">Feedback from visitors to our showroom.</p>
+        <div class="grid-3">
+          <article class="card">
+            <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="quote">&ldquo;Very nice service and collection .Good behaviour of staffs&rdquo;</p>
+            <div class="reviewer">Paushali Sarkar</div>
+          </article>
+          <article class="card">
+            <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="quote">&ldquo;Well behaved staff, nice environment, good product quality!&rdquo;</p>
+            <div class="reviewer">Saptak Banerjee</div>
+          </article>
+          <article class="card">
+            <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="quote">&ldquo;The showroom has a good range of products and customer service is excellent.&rdquo;</p>
+            <div class="reviewer">Ankita Gupta</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="visit">
+      <div class="container">
+        <h2 class="section-title">Showroom Details</h2>
+        <p class="section-sub">Stop by during business
