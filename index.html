@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bathkit — Branded Bathroom Fittings &amp; Sanitaryware in Kolkata</title>
+  <title>Bathkit — Branded Bathroom Fittings, Sanitaryware &amp; Service in Kolkata</title>
   <style>
     :root {
       --bg: #f6f8fa;
@@ -13,6 +13,8 @@
       --muted: #526470;
       --accent: #0f6b78;
       --accent-dark: #0a4d57;
+      --whatsapp: #168a47;
+      --whatsapp-dark: #116d38;
       --border: #dce4ea;
       --radius: 12px;
       --shadow: 0 8px 24px rgba(19, 34, 44, 0.06);
@@ -22,6 +24,10 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -37,7 +43,7 @@
     }
 
     .container {
-      max-width: 1080px;
+      max-width: 1120px;
       margin: 0 auto;
       padding: 0 20px;
     }
@@ -48,7 +54,7 @@
       border-bottom: 1px solid var(--border);
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 20;
     }
 
     .nav-inner {
@@ -56,8 +62,13 @@
       align-items: center;
       justify-content: space-between;
       min-height: 68px;
-      gap: 16px;
+      gap: 14px;
       flex-wrap: wrap;
+    }
+
+    .brand-wrap {
+      display: flex;
+      flex-direction: column;
     }
 
     .brand {
@@ -65,12 +76,19 @@
       font-weight: 700;
       letter-spacing: -0.02em;
       color: var(--accent-dark);
+      line-height: 1.15;
+    }
+
+    .brand-sub {
+      font-size: 0.76rem;
+      color: var(--muted);
+      font-weight: 500;
     }
 
     nav {
       display: flex;
-      gap: 20px;
-      font-size: 0.95rem;
+      gap: 18px;
+      font-size: 0.94rem;
       color: var(--muted);
     }
 
@@ -78,14 +96,20 @@
       color: var(--accent);
     }
 
+    .header-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
     .btn {
       display: inline-block;
       background: var(--accent);
       color: #ffffff;
-      padding: 11px 20px;
+      padding: 10px 18px;
       border-radius: 8px;
       font-weight: 600;
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       transition: background 0.2s ease;
     }
 
@@ -103,11 +127,27 @@
       background: var(--surface-alt);
     }
 
+    .btn-wa {
+      background: var(--whatsapp);
+      color: #ffffff;
+    }
+
+    .btn-wa:hover {
+      background: var(--whatsapp-dark);
+    }
+
     /* Hero */
     .hero {
-      padding: 64px 0 48px;
+      padding: 58px 0 46px;
       background: linear-gradient(180deg, var(--surface) 0%, var(--bg) 100%);
       border-bottom: 1px solid var(--border);
+    }
+
+    .badge-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
     }
 
     .badge {
@@ -118,21 +158,33 @@
       font-weight: 600;
       padding: 5px 12px;
       border-radius: 999px;
-      margin-bottom: 14px;
+    }
+
+    .rating-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #fff8eb;
+      border: 1px solid #f2d59b;
+      color: #7a4b00;
+      font-size: 0.84rem;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-radius: 999px;
     }
 
     h1 {
-      font-size: clamp(2rem, 4vw, 3rem);
+      font-size: clamp(2rem, 4vw, 2.95rem);
       line-height: 1.15;
       letter-spacing: -0.03em;
       margin-bottom: 16px;
-      max-width: 760px;
+      max-width: 820px;
     }
 
     .hero p {
-      font-size: 1.08rem;
+      font-size: 1.05rem;
       color: var(--muted);
-      max-width: 660px;
+      max-width: 740px;
       margin-bottom: 24px;
     }
 
@@ -155,8 +207,9 @@
 
     .section-sub {
       color: var(--muted);
-      margin-bottom: 28px;
+      margin-bottom: 26px;
       font-size: 0.98rem;
+      max-width: 760px;
     }
 
     /* Grid Cards */
@@ -172,12 +225,39 @@
       gap: 24px;
     }
 
+    .brand-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 14px;
+    }
+
     .card {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius);
       padding: 24px;
       box-shadow: var(--shadow);
+    }
+
+    .brand-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px 16px;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .brand-name {
+      font-size: 1.08rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+
+    .brand-tag {
+      font-size: 0.8rem;
+      color: var(--muted);
     }
 
     .card h3 {
@@ -190,10 +270,26 @@
       font-size: 0.95rem;
     }
 
+    .callout {
+      background: var(--surface);
+      border-left: 4px solid var(--accent);
+      border-top: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px 24px;
+      box-shadow: var(--shadow);
+      margin-top: 22px;
+    }
+
+    .callout strong {
+      color: var(--accent-dark);
+    }
+
     /* Reviews */
     .stars {
       color: #d9820b;
-      font-size: 0.95rem;
+      font-size: 0.98rem;
       margin-bottom: 10px;
       letter-spacing: 1px;
     }
@@ -225,11 +321,18 @@
     .info-label {
       font-weight: 700;
       display: block;
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       text-transform: uppercase;
       letter-spacing: 0.04em;
       color: var(--muted);
       margin-bottom: 2px;
+    }
+
+    .link-inline {
+      color: var(--accent-dark);
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 2px;
     }
 
     footer {
@@ -249,7 +352,7 @@
       gap: 12px;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 680px) {
       nav {
         display: none;
       }
@@ -259,58 +362,131 @@
 <body>
   <header>
     <div class="container nav-inner">
-      <a href="#" class="brand">Bathkit</a>
+      <div class="brand-wrap">
+        <a href="#" class="brand">Bathkit</a>
+        <span class="brand-sub">A Unit of Parry's Care</span>
+      </div>
       <nav aria-label="Primary Navigation">
-        <a href="#offerings">Collection</a>
+        <a href="#brands">Brands</a>
+        <a href="#services">Services &amp; Wholesale</a>
         <a href="#reviews">Reviews</a>
         <a href="#visit">Visit Us</a>
       </nav>
-      <a href="tel:03340011140" class="btn">Call 033 4001 1140</a>
+      <div class="header-actions">
+        <a href="https://wa.me/913340011140" target="_blank" rel="noopener noreferrer" class="btn btn-wa">WhatsApp</a>
+        <a href="tel:03340011140" class="btn">Call 033 4001 1140</a>
+      </div>
     </div>
   </header>
 
   <main>
     <section class="hero">
       <div class="container">
-        <span class="badge">Haltu · Purbachal Main Road, Kolkata</span>
-        <h1>Branded Bathroom Fittings &amp; Sanitaryware</h1>
+        <div class="badge-row">
+          <span class="badge">A Unit of Parry's Care · Haltu, Kolkata</span>
+          <span class="rating-pill" aria-label="5.0 out of 5 stars based on 3 featured Google reviews">
+            &#9733; 5.0 / 5 Rating (3 Featured Google Reviews)
+          </span>
+        </div>
+        <h1>Branded Bathroom Fittings, Sanitaryware &amp; Authorised Care</h1>
         <p>
-          A dedicated bathroom supply store featuring an extensive collection of branded fittings,
-          sanitaryware, and attentive showroom guidance in Sukhpally, Haltu.
+          <strong>Bathkit</strong> is a unit of <strong>Parry's Care</strong>, serving as distributors
+          of <strong>Roca</strong> and <strong>Parryware</strong> and offering an extensive collection
+          of branded bathroom fittings, sanitaryware, bathroom renovations, wholesale supply, and
+          authorised customer care across West Bengal. Please feel free to visit our showroom.
         </p>
         <div class="hero-actions">
-          <a href="#visit" class="btn">Get Directions &amp; Hours</a>
-          <a href="tel:03340011140" class="btn btn-outline">Speak With the Showroom</a>
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=202,+Purbachal+Main+Rd,+Sukhpally,+Haltu,+Kolkata,+West+Bengal+700078"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn"
+          >
+            Google Maps Location
+          </a>
+          <a
+            href="https://wa.me/913340011140?text=Hello%20Bathkit%20(Parry's%20Care)%2C%20I%20would%20like%20to%20enquire%20about%20fittings%2C%20sanitaryware%2C%20renovation%2C%20or%20wholesale."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-wa"
+          >
+            Chat on WhatsApp
+          </a>
+          <a href="tel:03340011140" class="btn btn-outline">Call 033 4001 1140</a>
         </div>
       </div>
     </section>
 
-    <section id="offerings">
+    <section id="brands">
       <div class="container">
-        <h2 class="section-title">What You Can Expect</h2>
+        <h2 class="section-title">Brands We Deal With</h2>
         <p class="section-sub">
-          Thoughtfully curated options and helpful in-store support for home builds and renovations.
+          Extensive collection of branded bathroom fittings and sanitaryware across leading names,
+          with distribution and authorised customer care for Roca and Parryware.
+        </p>
+        <div class="brand-grid">
+          <div class="brand-card">
+            <div class="brand-name">Roca</div>
+            <div class="brand-tag">Distributor &amp; WB Auth. Care</div>
+          </div>
+          <div class="brand-card">
+            <div class="brand-name">Parryware</div>
+            <div class="brand-tag">Distributor &amp; WB Auth. Care</div>
+          </div>
+          <div class="brand-card">
+            <div class="brand-name">Hansgrohe</div>
+            <div class="brand-tag">Bathroom Fittings</div>
+          </div>
+          <div class="brand-card">
+            <div class="brand-name">Jaquar</div>
+            <div class="brand-tag">Bathroom Fittings</div>
+          </div>
+          <div class="brand-card">
+            <div class="brand-name">Cera</div>
+            <div class="brand-tag">Fittings &amp; Sanitaryware</div>
+          </div>
+          <div class="brand-card">
+            <div class="brand-name">Jayna</div>
+            <div class="brand-tag">Bathroom Fittings</div>
+          </div>
+        </div>
+
+        <div class="callout">
+          <strong>Bathkit is a unit of Parry's Care:</strong> We are distributors of
+          <strong>Roca</strong> and <strong>Parryware</strong>, and we are the
+          <strong>authorised customer care service provider of Roca and Parryware for the whole of West Bengal</strong>.
+          Please feel free to visit our showroom for products, guidance, and service support.
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <h2 class="section-title">Showroom, Renovation &amp; Wholesale</h2>
+        <p class="section-sub">
+          Supporting individual homeowners, contractors, builders, and bulk buyers from Purbachal
+          Main Road, Haltu.
         </p>
         <div class="grid-3">
           <div class="card">
-            <h3>Branded Bath Fittings</h3>
+            <h3>Showroom &amp; Authorised Care</h3>
             <p>
-              Wide range of branded faucets, mixers, showers, and bathroom hardware selected for
-              everyday durability and finish.
+              Browse Hansgrohe, Jaquar, Cera, Jayna, Parryware, and Roca fittings and sanitaryware,
+              backed by authorised Roca and Parryware customer care service across West Bengal.
             </p>
           </div>
           <div class="card">
-            <h3>Sanitaryware Collection</h3>
+            <h3>Bathroom Renovations</h3>
             <p>
-              Explore clean, practical sanitaryware options suited for modern residences, compact
-              baths, and full upgrades.
+              We renovate bathrooms—helping you plan upgrades, coordinate fittings and sanitaryware,
+              and refresh existing spaces smoothly.
             </p>
           </div>
           <div class="card">
-            <h3>Helpful Showroom Service</h3>
+            <h3>Wholesale Supply</h3>
             <p>
-              Courteous, well-informed staff ready to help you compare product ranges and plan your
-              bathroom setup comfortably.
+              We do wholesale also—supplying builders, plumbers, retailers, and project buyers with
+              dependable stock and distribution support.
             </p>
           </div>
         </div>
@@ -319,8 +495,18 @@
 
     <section id="reviews">
       <div class="container">
-        <h2 class="section-title">Customer Reviews</h2>
-        <p class="section-sub">Feedback from visitors to our showroom.</p>
+        <h2 class="section-title">Customer Ratings &amp; Reviews</h2>
+        <p class="section-sub">
+          Rated <strong>5.0 / 5</strong> across the featured Google reviews below:
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=202,+Purbachal+Main+Rd,+Sukhpally,+Haltu,+Kolkata,+West+Bengal+700078"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link-inline"
+          >
+            View on Google Maps
+          </a>
+        </p>
         <div class="grid-3">
           <article class="card">
             <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
@@ -343,5 +529,94 @@
 
     <section id="visit">
       <div class="container">
-        <h2 class="section-title">Showroom Details</h2>
-        <p class="section-sub">Stop by during business
+        <h2 class="section-title">Visit Our Showroom</h2>
+        <p class="section-sub">
+          Please feel free to visit our showroom in Haltu, Kolkata, or reach out via phone or
+          WhatsApp.
+        </p>
+        <div class="grid-2">
+          <div class="card">
+            <ul class="info-list">
+              <li>
+                <span class="info-label">Address</span>
+                202, Purbachal Main Rd, Sukhpally, Haltu, Kolkata, West Bengal 700078
+              </li>
+              <li>
+                <span class="info-label">Phone Number</span>
+                <a href="tel:03340011140" class="link-inline">033 4001 1140</a>
+              </li>
+              <li>
+                <span class="info-label">WhatsApp</span>
+                <a
+                  href="https://wa.me/913340011140?text=Hello%20Bathkit%2C%20I%20would%20like%20to%20connect%20with%20your%20showroom."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="link-inline"
+                >
+                  https://wa.me/913340011140
+                </a>
+              </li>
+              <li>
+                <span class="info-label">Hours</span>
+                Open · Closes 8:00 PM
+              </li>
+              <li>
+                <span class="info-label">Rating</span>
+                5.0 / 5 (from featured customer reviews)
+              </li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Directions &amp; Quick Contact</h3>
+            <p style="margin-bottom: 18px;">
+              Bathkit (a unit of Parry's Care) is located at 202, Purbachal Main Rd, Sukhpally,
+              Haltu, Kolkata 700078. Open until 8:00 PM for retail, wholesale, renovation
+              queries, and Roca &amp; Parryware support.
+            </p>
+            <div class="hero-actions">
+              <a
+                class="btn"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.google.com/maps/search/?api=1&query=202,+Purbachal+Main+Rd,+Sukhpally,+Haltu,+Kolkata,+West+Bengal+700078"
+              >
+                Open in Google Maps
+              </a>
+              <a
+                class="btn btn-wa"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://wa.me/913340011140?text=Hello%20Bathkit%2C%20I%20would%20like%20to%20visit%20or%20enquire%20about%20products."
+              >
+                WhatsApp Inquiry
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>&copy; <span id="year"></span> Bathkit (A Unit of Parry's Care). All rights reserved.</div>
+      <div>
+        202, Purbachal Main Rd, Haltu, Kolkata 700078 &middot;
+        <a href="tel:03340011140" class="link-inline">033 4001 1140</a> &middot;
+        <a
+          href="https://wa.me/913340011140"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="link-inline"
+        >
+          WhatsApp
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
