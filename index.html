@@ -6,17 +6,18 @@
   <title>Bathkit — Branded Bathroom Fittings, Sanitaryware &amp; Service in Kolkata</title>
   <style>
     :root {
-      --bg: #f7f0e4;
-      --surface: #fbf6ed;
-      --surface-alt: #efe3cf;
-      --ink: #1d2433;
-      --muted: #5c5244;
+      --bg: #f4f6fb;
+      --surface: #ffffff;
+      --surface-alt: #eef2ff;
+      --ink: #111827;
+      --muted: #4b5563;
       --accent: #2541b2;
       --accent-dark: #172c7a;
-      --accent-soft: #e6ecff;
-      --border: #e2d3ba;
+      --accent-soft: #e0e7ff;
+      --border: #d8e0f0;
       --radius: 12px;
-      --shadow: 0 6px 20px rgba(23, 44, 122, 0.07);
+      --shadow: 0 6px 20px rgba(17, 24, 39, 0.06);
+      --gh-raw: https://raw.githubusercontent.com/subhamghoshconsultant/Bathkit-website/main;
     }
 
     * {
@@ -49,8 +50,8 @@
 
     /* Header / Nav */
     header {
-      background: var(--surface-alt);
-      border-bottom: 1px solid var(--border);
+      background: var(--surface);
+      border-bottom: 2px solid var(--accent);
       position: sticky;
       top: 0;
       z-index: 20;
@@ -76,13 +77,13 @@
       display: inline-flex;
       align-items: center;
       background: #ffffff;
-      padding: 4px 10px;
+      padding: 6px 12px;
       border-radius: 8px;
-      border: 1px solid var(--border);
+      border: 1.5px solid var(--accent);
     }
 
     .brand-logo-img {
-      height: 44px;
+      height: 42px;
       width: auto;
       max-width: 170px;
       object-fit: contain;
@@ -98,21 +99,22 @@
       font-size: 1.2rem;
       font-weight: 700;
       letter-spacing: -0.02em;
-      color: var(--accent);
+      color: var(--ink);
       line-height: 1.15;
     }
 
     .brand-sub {
-      font-size: 0.76rem;
-      color: var(--muted);
-      font-weight: 500;
+      font-size: 0.78rem;
+      color: var(--accent-dark);
+      font-weight: 600;
     }
 
     nav {
       display: flex;
       gap: 16px;
       font-size: 0.92rem;
-      color: var(--muted);
+      color: var(--ink);
+      font-weight: 500;
       flex-wrap: wrap;
     }
 
@@ -151,8 +153,8 @@
 
     .btn-outline {
       background: var(--surface);
-      color: var(--accent);
-      border: 1px solid var(--accent);
+      color: var(--ink);
+      border: 1.5px solid var(--accent);
     }
 
     .btn-outline:hover {
@@ -161,8 +163,8 @@
     }
 
     .btn-wa {
-      background: #1d358c;
-      border-color: #1d358c;
+      background: #111827;
+      border-color: var(--accent);
       color: #ffffff;
     }
 
@@ -174,7 +176,7 @@
     /* Hero */
     .hero {
       padding: 54px 0 44px;
-      background: var(--surface-alt);
+      background: var(--surface);
       border-bottom: 1px solid var(--border);
     }
 
@@ -188,21 +190,21 @@
     .badge {
       display: inline-block;
       background: var(--accent-soft);
-      color: var(--accent);
+      color: var(--accent-dark);
       font-size: 0.82rem;
-      font-weight: 600;
+      font-weight: 700;
       padding: 5px 12px;
       border-radius: 999px;
-      border: 1px solid #c3d0fa;
+      border: 1px solid var(--accent);
     }
 
     .rating-pill {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      background: var(--surface);
+      background: #111827;
       border: 1px solid var(--accent);
-      color: var(--accent);
+      color: #ffffff;
       font-size: 0.84rem;
       font-weight: 600;
       padding: 5px 12px;
@@ -239,7 +241,7 @@
     }
 
     section:nth-of-type(even) {
-      background: var(--surface-alt);
+      background: var(--surface);
     }
 
     section:last-of-type {
@@ -250,7 +252,7 @@
       font-size: 1.55rem;
       letter-spacing: -0.02em;
       margin-bottom: 8px;
-      color: var(--accent);
+      color: var(--accent-dark);
     }
 
     .section-sub {
@@ -290,7 +292,7 @@
     .brand-card {
       background: var(--surface);
       border: 1px solid var(--border);
-      border-top: 3px solid var(--accent);
+      border-top: 4px solid var(--accent);
       border-radius: var(--radius);
       padding: 18px 16px;
       text-align: center;
@@ -304,12 +306,12 @@
 
     .brand-logo-box {
       width: 100%;
-      height: 68px;
+      height: 70px;
       display: flex;
       align-items: center;
       justify-content: center;
       background: #ffffff;
-      border: 1px solid var(--border);
+      border: 1px solid #cbd5e1;
       border-radius: 8px;
       padding: 8px 12px;
     }
@@ -332,13 +334,13 @@
     .brand-tag {
       font-size: 0.8rem;
       color: var(--accent);
-      font-weight: 500;
+      font-weight: 600;
     }
 
     .card h3 {
       font-size: 1.12rem;
       margin-bottom: 8px;
-      color: var(--accent);
+      color: var(--accent-dark);
     }
 
     .card p {
@@ -347,7 +349,7 @@
     }
 
     .callout {
-      background: var(--surface);
+      background: var(--surface-alt);
       border-left: 4px solid var(--accent);
       border-top: 1px solid var(--border);
       border-right: 1px solid var(--border);
@@ -360,7 +362,7 @@
     }
 
     .callout strong {
-      color: var(--accent);
+      color: var(--accent-dark);
     }
 
     /* Catalogue */
@@ -373,8 +375,8 @@
 
     .filter-btn {
       background: var(--surface);
-      color: var(--accent);
-      border: 1px solid var(--accent);
+      color: var(--ink);
+      border: 1.5px solid var(--accent);
       padding: 7px 14px;
       border-radius: 999px;
       font-size: 0.86rem;
@@ -421,7 +423,7 @@
       align-items: center;
       gap: 8px;
       font-size: 0.78rem;
-      font-weight: 600;
+      font-weight: 700;
       color: var(--accent);
     }
 
@@ -448,7 +450,7 @@
 
     .price-tag {
       font-weight: 700;
-      color: var(--accent);
+      color: var(--accent-dark);
       font-size: 0.92rem;
     }
 
@@ -469,7 +471,7 @@
     .field label {
       font-size: 0.84rem;
       font-weight: 600;
-      color: var(--accent);
+      color: var(--ink);
     }
 
     .field input,
@@ -477,9 +479,9 @@
     .field textarea {
       width: 100%;
       padding: 10px 12px;
-      border: 1px solid var(--border);
+      border: 1px solid #cbd5e1;
       border-radius: 8px;
-      background: var(--bg);
+      background: #ffffff;
       color: var(--ink);
       font-family: inherit;
       font-size: 0.92rem;
@@ -496,7 +498,7 @@
       margin-top: 14px;
       padding: 12px 16px;
       border-radius: 8px;
-      border: 1px solid var(--accent);
+      border: 1.5px solid var(--accent);
       background: var(--accent-soft);
       color: var(--ink);
       font-size: 0.9rem;
@@ -527,9 +529,9 @@
     }
 
     .reviewer {
-      font-weight: 600;
+      font-weight: 700;
       font-size: 0.9rem;
-      color: var(--accent);
+      color: var(--accent-dark);
     }
 
     /* Visit / Info */
@@ -550,7 +552,7 @@
       font-size: 0.8rem;
       text-transform: uppercase;
       letter-spacing: 0.04em;
-      color: var(--accent);
+      color: var(--accent-dark);
       margin-bottom: 2px;
     }
 
@@ -562,12 +564,16 @@
     }
 
     footer {
-      background: var(--surface-alt);
-      border-top: 2px solid var(--accent);
+      background: #111827;
+      border-top: 3px solid var(--accent);
       padding: 28px 0;
       margin-top: 16px;
-      color: var(--muted);
+      color: #e5e7eb;
       font-size: 0.9rem;
+    }
+
+    footer .link-inline {
+      color: #93c5fd;
     }
 
     .footer-inner {
@@ -591,7 +597,7 @@
       <div class="brand-wrap">
         <a href="#" class="brand-logo-link" aria-label="Bathkit Home">
           <img
-            src="./BathkitLogo.png"
+            src="https://raw.githubusercontent.com/subhamghoshconsultant/Bathkit-website/main/BathkitLogo.png"
             alt="Bathkit — Unit of Parry's Care Logo"
             class="brand-logo-img"
             onerror="this.style.display='none'; document.getElementById('fallbackBrandText').style.display='inline';"
@@ -599,6 +605,7 @@
           <span id="fallbackBrandText" class="brand" style="display:none;">Bathkit</span>
         </a>
         <div class="brand-meta">
+          <span class="brand">Bathkit</span>
           <span class="brand-sub">A Unit of Parry's Care · Kalikapur Branch</span>
         </div>
       </div>
@@ -649,7 +656,13 @@
         <div class="brand-grid">
           <div class="brand-card">
             <div class="brand-logo-box">
-              <span class="brand-name">Roca</span>
+              <img
+                src="https://raw.githubusercontent.com/subhamghoshconsultant/Bathkit-website/main/BathkitLogo.png"
+                alt="Roca &amp; Bathkit Distributor Badge"
+                class="brand-logo-img-card"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';"
+              />
+              <span class="brand-name" style="display:none;">Roca</span>
             </div>
             <div>
               <div class="brand-name">Roca</div>
@@ -660,7 +673,7 @@
           <div class="brand-card">
             <div class="brand-logo-box">
               <img
-                src="./Untitled Design - 1.png"
+                src="https://raw.githubusercontent.com/subhamghoshconsultant/Bathkit-website/main/Untitled%20Design%20-%201.png"
                 alt="Parryware Logo"
                 class="brand-logo-img-card"
                 onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';"
@@ -676,7 +689,7 @@
           <div class="brand-card">
             <div class="brand-logo-box">
               <img
-                src="./Hansgrohe-Logo.png"
+                src="https://raw.githubusercontent.com/subhamghoshconsultant/Bathkit-website/main/Hansgrohe-Logo.png"
                 alt="Hansgrohe Logo"
                 class="brand-logo-img-card"
                 onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';"
@@ -692,7 +705,7 @@
           <div class="brand-card">
             <div class="brand-logo-box">
               <img
-                src="./jaquar-bathroom-logo-1024x640.png"
+                src="https://raw.githubusercontent.com/subhamghoshconsultant/Bathkit-website/main/jaquar-bathroom-logo-1024x640.png"
                 alt="Jaquar Bathroom Logo"
                 class="brand-logo-img-card"
                 onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';"
@@ -708,7 +721,7 @@
           <div class="brand-card">
             <div class="brand-logo-box">
               <img
-                src="./Untitled Design - 1 (2).png"
+                src="https://raw.githubusercontent.com/subhamghoshconsultant/Bathkit-website/main/Untitled%20Design%20-%201%20(2).png"
                 alt="Cera Logo"
                 class="brand-logo-img-card"
                 onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';"
@@ -723,7 +736,13 @@
 
           <div class="brand-card">
             <div class="brand-logo-box">
-              <span class="brand-name">Jayna</span>
+              <img
+                src="https://raw.githubusercontent.com/subhamghoshconsultant/Bathkit-website/main/69975517.png"
+                alt="Parry's Care Logo"
+                class="brand-logo-img-card"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';"
+              />
+              <span class="brand-name" style="display:none;">Jayna</span>
             </div>
             <div>
               <div class="brand-name">Jayna</div>
