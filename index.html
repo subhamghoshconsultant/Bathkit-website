@@ -62,7 +62,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      min-height: 84px;
+      min-height: 98px;
       gap: 16px;
       flex-wrap: wrap;
       padding: 10px 0;
@@ -71,23 +71,23 @@
     .brand-wrap {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 16px;
     }
 
     .brand-logo-link {
       display: inline-flex;
       align-items: center;
       background: var(--surface);
-      padding: 8px 16px;
-      border-radius: 10px;
-      border: 2px solid var(--accent-light);
-      box-shadow: 0 4px 14px rgba(37, 65, 178, 0.25);
+      padding: 10px 20px;
+      border-radius: 12px;
+      border: 2px solid var(--accent-lighter);
+      box-shadow: 0 6px 18px rgba(37, 65, 178, 0.35);
     }
 
     .brand-logo-img {
-      height: 62px;
+      height: 82px;
       width: auto;
-      max-width: 240px;
+      max-width: 320px;
       object-fit: contain;
       display: block;
     }
@@ -98,7 +98,7 @@
     }
 
     .brand {
-      font-size: 1.3rem;
+      font-size: 1.38rem;
       font-weight: 700;
       letter-spacing: -0.02em;
       color: var(--accent-lighter);
@@ -106,7 +106,7 @@
     }
 
     .brand-sub {
-      font-size: 0.8rem;
+      font-size: 0.82rem;
       color: var(--accent-light);
       font-weight: 600;
     }
@@ -408,6 +408,13 @@
       display: block;
     }
 
+    .brand-svg-logo {
+      height: 40px;
+      width: auto;
+      max-width: 100%;
+      display: block;
+    }
+
     .brand-name {
       font-size: 1.06rem;
       font-weight: 700;
@@ -671,8 +678,8 @@
       }
 
       .brand-logo-img {
-        height: 52px;
-        max-width: 195px;
+        height: 62px;
+        max-width: 245px;
       }
     }
   </style>
@@ -743,13 +750,11 @@
         <div class="brand-grid">
           <div class="brand-card">
             <div class="brand-logo-box">
-              <img
-                src="https://raw.githubusercontent.com/subhamghoshconsultant/Bathkit-website/main/BathkitLogo.png"
-                alt="Roca &amp; Bathkit Distributor Badge"
-                class="brand-logo-img-card"
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';"
-              />
-              <span class="brand-name" style="display:none;">Roca</span>
+              <svg class="brand-svg-logo" viewBox="0 0 180 56" role="img" aria-label="Roca Logo">
+                <text x="90" y="34" text-anchor="middle" fill="#93c5fd" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="800" letter-spacing="2">ROCA</text>
+                <rect x="28" y="42" width="56" height="4" rx="2" fill="#5b82f6" />
+                <rect x="92" y="42" width="60" height="4" rx="2" fill="#2541b2" />
+              </svg>
             </div>
             <div>
               <div class="brand-name">Roca</div>
@@ -823,13 +828,10 @@
 
           <div class="brand-card">
             <div class="brand-logo-box">
-              <img
-                src="https://raw.githubusercontent.com/subhamghoshconsultant/Bathkit-website/main/69975517.png"
-                alt="Parry's Care Logo"
-                class="brand-logo-img-card"
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';"
-              />
-              <span class="brand-name" style="display:none;">Jayna</span>
+              <svg class="brand-svg-logo" viewBox="0 0 180 56" role="img" aria-label="Jayna Logo">
+                <rect x="18" y="10" width="144" height="36" rx="7" fill="#2541b2" stroke="#5b82f6" stroke-width="1.5" />
+                <text x="90" y="34" text-anchor="middle" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="800" letter-spacing="4">JAYNA</text>
+              </svg>
             </div>
             <div>
               <div class="brand-name">Jayna</div>
@@ -847,14 +849,15 @@
       <div class="container">
         <h2 class="section-title">Care &amp; Everyday Bathroom Living</h2>
         <p class="section-sub">
-          See how regular upkeep keeps mirrors, sanitaryware, and mixers gleaming—and how quality fittings elevate everyday home routines.
+          Short-form reels showing how regular upkeep keeps mirrors, sanitaryware, and mixers gleaming—and how quality fittings elevate everyday home routines.
         </p>
         <div class="grid-2">
           <article class="video-card">
             <div class="video-frame-wrap">
               <video
-                class="showcase-video"
+                class="showcase-video short-reel"
                 src="./video_1.mp4"
+                data-short-loop="10"
                 autoplay
                 muted
                 loop
@@ -866,10 +869,10 @@
               </video>
             </div>
             <div class="video-body">
-              <span class="video-tag">Care &amp; Maintenance</span>
+              <span class="video-tag">Short Reel · Care &amp; Maintenance</span>
               <div class="video-title">&ldquo;Everything worth keeping requires maintenance.&rdquo;</div>
               <p class="video-desc">
-                Routine cleaning and care help preserve mirror clarity, sanitaryware glaze, basin surfaces, and shower/faucet finishes over years of daily use.
+                Quick look at how routine care helps preserve mirror clarity, sanitaryware glaze, basin surfaces, and shower/faucet finishes over years of daily use.
               </p>
               <div class="video-footer">
                 <span class="video-caption-note">Roca &amp; Parryware West Bengal Care</span>
@@ -881,8 +884,9 @@
           <article class="video-card">
             <div class="video-frame-wrap">
               <video
-                class="showcase-video"
+                class="showcase-video short-reel"
                 src="./video_2.mp4"
+                data-short-loop="10"
                 autoplay
                 muted
                 loop
@@ -894,10 +898,10 @@
               </video>
             </div>
             <div class="video-body">
-              <span class="video-tag">Everyday Living &amp; Renovation</span>
+              <span class="video-tag">Short Reel · Everyday Living</span>
               <div class="video-title">Smooth Flow &amp; Welcoming Home Spaces</div>
               <p class="video-desc">
-                From crisp basin mixers and morning routines to clean, well-kept bathroom spaces—explore fittings and renovation ideas suited for modern homes.
+                A short glimpse of crisp basin mixers, morning routines, and clean, well-kept bathroom spaces designed for modern homes.
               </p>
               <div class="video-footer">
                 <span class="video-caption-note">Showroom &amp; Renovation Guidance</span>
@@ -1186,6 +1190,22 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Short-form reel loop handler for autoplay showcase videos
+    document.querySelectorAll("video.short-reel").forEach((vid) => {
+      const maxShortSeconds = Number(vid.getAttribute("data-short-loop")) || 10;
+      vid.muted = true;
+      vid.play().catch(() => {});
+
+      vid.addEventListener("timeupdate", () => {
+        if (vid.currentTime >= maxShortSeconds) {
+          vid.currentTime = 0;
+          if (vid.paused) {
+            vid.play().catch(() => {});
+          }
+        }
+      });
+    });
 
     const STORAGE_KEY = "bathkit_catalogue_draft_v1";
 
