@@ -6,17 +6,17 @@
   <title>Bathkit — Branded Bathroom Fittings, Sanitaryware &amp; Service in Kolkata</title>
   <style>
     :root {
-      --bg: #ffffff;
-      --surface: #ffffff;
-      --surface-alt: #eef6f1;
-      --ink: #112018;
-      --muted: #4d6156;
-      --accent: #0f5132;
-      --accent-dark: #093621;
-      --accent-soft: #e6f2ec;
-      --border: #dce5e0;
+      --bg: #f7f0e4;
+      --surface: #fbf6ed;
+      --surface-alt: #efe3cf;
+      --ink: #1d2433;
+      --muted: #5c5244;
+      --accent: #2541b2;
+      --accent-dark: #172c7a;
+      --accent-soft: #e6ecff;
+      --border: #e2d3ba;
       --radius: 12px;
-      --shadow: 0 6px 20px rgba(9, 54, 33, 0.06);
+      --shadow: 0 6px 20px rgba(23, 44, 122, 0.07);
     }
 
     * {
@@ -49,7 +49,7 @@
 
     /* Header / Nav */
     header {
-      background: var(--surface);
+      background: var(--surface-alt);
       border-bottom: 1px solid var(--border);
       position: sticky;
       top: 0;
@@ -60,18 +60,42 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      min-height: 68px;
+      min-height: 72px;
       gap: 14px;
       flex-wrap: wrap;
+      padding: 8px 0;
     }
 
     .brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-logo-link {
+      display: inline-flex;
+      align-items: center;
+      background: #ffffff;
+      padding: 4px 10px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+
+    .brand-logo-img {
+      height: 44px;
+      width: auto;
+      max-width: 170px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .brand-meta {
       display: flex;
       flex-direction: column;
     }
 
     .brand {
-      font-size: 1.35rem;
+      font-size: 1.2rem;
       font-weight: 700;
       letter-spacing: -0.02em;
       color: var(--accent);
@@ -86,9 +110,10 @@
 
     nav {
       display: flex;
-      gap: 18px;
-      font-size: 0.94rem;
+      gap: 16px;
+      font-size: 0.92rem;
       color: var(--muted);
+      flex-wrap: wrap;
     }
 
     nav a:hover {
@@ -110,6 +135,7 @@
       font-weight: 600;
       font-size: 0.92rem;
       border: 1px solid var(--accent);
+      cursor: pointer;
       transition: background 0.2s ease, border-color 0.2s ease;
     }
 
@@ -118,20 +144,25 @@
       border-color: var(--accent-dark);
     }
 
+    .btn-sm {
+      padding: 7px 13px;
+      font-size: 0.84rem;
+    }
+
     .btn-outline {
-      background: #ffffff;
+      background: var(--surface);
       color: var(--accent);
       border: 1px solid var(--accent);
     }
 
     .btn-outline:hover {
-      background: var(--surface-alt);
+      background: var(--accent-soft);
       color: var(--accent-dark);
     }
 
     .btn-wa {
-      background: #146c43;
-      border-color: #146c43;
+      background: #1d358c;
+      border-color: #1d358c;
       color: #ffffff;
     }
 
@@ -142,8 +173,8 @@
 
     /* Hero */
     .hero {
-      padding: 58px 0 46px;
-      background: #ffffff;
+      padding: 54px 0 44px;
+      background: var(--surface-alt);
       border-bottom: 1px solid var(--border);
     }
 
@@ -162,14 +193,14 @@
       font-weight: 600;
       padding: 5px 12px;
       border-radius: 999px;
-      border: 1px solid #c6ddd0;
+      border: 1px solid #c3d0fa;
     }
 
     .rating-pill {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      background: #ffffff;
+      background: var(--surface);
       border: 1px solid var(--accent);
       color: var(--accent);
       font-size: 0.84rem;
@@ -179,7 +210,7 @@
     }
 
     h1 {
-      font-size: clamp(2rem, 4vw, 2.95rem);
+      font-size: clamp(2rem, 4vw, 2.9rem);
       line-height: 1.15;
       letter-spacing: -0.03em;
       margin-bottom: 16px;
@@ -190,7 +221,7 @@
     .hero p {
       font-size: 1.05rem;
       color: var(--muted);
-      max-width: 740px;
+      max-width: 760px;
       margin-bottom: 24px;
     }
 
@@ -203,7 +234,16 @@
     /* Sections */
     section {
       padding: 52px 0;
-      background: #ffffff;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+    }
+
+    section:nth-of-type(even) {
+      background: var(--surface-alt);
+    }
+
+    section:last-of-type {
+      border-bottom: none;
     }
 
     .section-title {
@@ -215,15 +255,15 @@
 
     .section-sub {
       color: var(--muted);
-      margin-bottom: 26px;
+      margin-bottom: 24px;
       font-size: 0.98rem;
-      max-width: 760px;
+      max-width: 780px;
     }
 
     /* Grid Cards */
     .grid-3 {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
       gap: 20px;
     }
 
@@ -235,12 +275,12 @@
 
     .brand-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 14px;
+      grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+      gap: 16px;
     }
 
     .card {
-      background: #ffffff;
+      background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius);
       padding: 24px;
@@ -248,20 +288,45 @@
     }
 
     .brand-card {
-      background: #ffffff;
+      background: var(--surface);
       border: 1px solid var(--border);
       border-top: 3px solid var(--accent);
       border-radius: var(--radius);
       padding: 18px 16px;
       text-align: center;
       box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .brand-logo-box {
+      width: 100%;
+      height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 12px;
+    }
+
+    .brand-logo-img-card {
+      max-height: 46px;
+      max-width: 100%;
+      width: auto;
+      object-fit: contain;
+      display: block;
     }
 
     .brand-name {
-      font-size: 1.08rem;
+      font-size: 1.06rem;
       font-weight: 700;
       color: var(--ink);
-      margin-bottom: 4px;
+      margin-bottom: 2px;
     }
 
     .brand-tag {
@@ -282,13 +347,13 @@
     }
 
     .callout {
-      background: #ffffff;
+      background: var(--surface);
       border-left: 4px solid var(--accent);
       border-top: 1px solid var(--border);
       border-right: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 22px 24px;
+      padding: 20px 24px;
       box-shadow: var(--shadow);
       margin-top: 22px;
       color: var(--ink);
@@ -296,6 +361,155 @@
 
     .callout strong {
       color: var(--accent);
+    }
+
+    /* Catalogue */
+    .filter-bar {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 22px;
+    }
+
+    .filter-btn {
+      background: var(--surface);
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 7px 14px;
+      border-radius: 999px;
+      font-size: 0.86rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .filter-btn.active,
+    .filter-btn:hover {
+      background: var(--accent);
+      color: #ffffff;
+    }
+
+    .catalogue-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .catalogue-img {
+      width: 100%;
+      height: 195px;
+      object-fit: cover;
+      border-bottom: 1px solid var(--border);
+      background: var(--surface-alt);
+    }
+
+    .catalogue-body {
+      padding: 18px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex: 1;
+    }
+
+    .catalogue-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    .catalogue-title {
+      font-size: 1.06rem;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .catalogue-desc {
+      font-size: 0.9rem;
+      color: var(--muted);
+      flex: 1;
+    }
+
+    .catalogue-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 10px;
+      border-top: 1px solid var(--border);
+      gap: 8px;
+    }
+
+    .price-tag {
+      font-weight: 700;
+      color: var(--accent);
+      font-size: 0.92rem;
+    }
+
+    /* Forms & Management Box */
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .field label {
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: inherit;
+      font-size: 0.92rem;
+    }
+
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus {
+      outline: 2px solid var(--accent);
+      border-color: var(--accent);
+    }
+
+    .status-box {
+      margin-top: 14px;
+      padding: 12px 16px;
+      border-radius: 8px;
+      border: 1px solid var(--accent);
+      background: var(--accent-soft);
+      color: var(--ink);
+      font-size: 0.9rem;
+      display: none;
+    }
+
+    /* Enquiry Cards */
+    .enquiry-number {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin: 8px 0 12px;
+      display: block;
     }
 
     /* Reviews */
@@ -348,10 +562,10 @@
     }
 
     footer {
-      background: #ffffff;
+      background: var(--surface-alt);
       border-top: 2px solid var(--accent);
       padding: 28px 0;
-      margin-top: 24px;
+      margin-top: 16px;
       color: var(--muted);
       font-size: 0.9rem;
     }
@@ -375,17 +589,29 @@
   <header>
     <div class="container nav-inner">
       <div class="brand-wrap">
-        <a href="#" class="brand">Bathkit</a>
-        <span class="brand-sub">A Unit of Parry's Care</span>
+        <a href="#" class="brand-logo-link" aria-label="Bathkit Home">
+          <img
+            src="./BathkitLogo.png"
+            alt="Bathkit — Unit of Parry's Care Logo"
+            class="brand-logo-img"
+            onerror="this.style.display='none'; document.getElementById('fallbackBrandText').style.display='inline';"
+          />
+          <span id="fallbackBrandText" class="brand" style="display:none;">Bathkit</span>
+        </a>
+        <div class="brand-meta">
+          <span class="brand-sub">A Unit of Parry's Care · Kalikapur Branch</span>
+        </div>
       </div>
       <nav aria-label="Primary Navigation">
         <a href="#brands">Brands</a>
-        <a href="#services">Services &amp; Wholesale</a>
+        <a href="#catalogue">Catalogue</a>
+        <a href="#booking">Booking</a>
+        <a href="#enquiries">Bulk Order &amp; Project</a>
         <a href="#reviews">Reviews</a>
         <a href="#visit">Visit Us</a>
       </nav>
       <div class="header-actions">
-        <a href="https://wa.me/913340011140" target="_blank" rel="noopener noreferrer" class="btn btn-wa">WhatsApp</a>
+        <a href="#booking" class="btn btn-outline">Book Appointment</a>
         <a href="tel:03340011140" class="btn">Call 033 4001 1140</a>
       </div>
     </div>
@@ -396,22 +622,20 @@
       <div class="container">
         <div class="badge-row">
           <span class="badge">A Unit of Parry's Care · Haltu, Kolkata</span>
-          <span class="rating-pill" aria-label="5.0 out of 5 stars based on 3 featured Google reviews">
-            &#9733; 5.0 / 5 Rating (3 Featured Google Reviews)
+          <span class="rating-pill" aria-label="4.9 out of 5 stars based on 213 Google reviews">
+            &#9733; 4.9 / 5 Rating (213 Reviews)
           </span>
         </div>
         <h1>Branded Bathroom Fittings, Sanitaryware &amp; Authorised Care</h1>
         <p>
-          <strong>Bathkit</strong> is a unit of <strong>Parry's Care</strong>, serving as distributors of <strong>Roca</strong> and <strong>Parryware</strong> and offering an extensive collection of branded bathroom fittings, sanitaryware, bathroom renovations, wholesale supply, and authorised customer care across West Bengal. Please feel free to visit our showroom.
+          <strong>Bathkit</strong> is a unit of <strong>Parry's Care</strong>, serving as distributors of <strong>Roca</strong> and <strong>Parryware</strong> and offering an extensive collection of branded bathroom fittings, sanitaryware, bathroom renovations, bulk order supply, and authorised customer care across West Bengal. Please feel free to visit our showroom.
         </p>
         <div class="hero-actions">
-          <a href="https://www.google.com/maps/search/?api=1&query=202,+Purbachal+Main+Rd,+Sukhpally,+Haltu,+Kolkata,+West+Bengal+700078" target="_blank" rel="noopener noreferrer" class="btn">
-            Google Maps Location
+          <a href="#booking" class="btn">Book Showroom / Service Visit</a>
+          <a href="#catalogue" class="btn btn-outline">Browse Catalogue</a>
+          <a href="https://wa.me/918697931751?text=Hello%20Bathkit%20(Parry's%20Care)%2C%20I%20would%20like%20to%20enquire%20about%20fittings%2C%20sanitaryware%2C%20renovation%2C%20or%20bulk%20order." target="_blank" rel="noopener noreferrer" class="btn btn-wa">
+            Bathkit WhatsApp Contact
           </a>
-          <a href="https://wa.me/913340011140?text=Hello%20Bathkit%20(Parry's%20Care)%2C%20I%20would%20like%20to%20enquire%20about%20fittings%2C%20sanitaryware%2C%20renovation%2C%20or%20wholesale." target="_blank" rel="noopener noreferrer" class="btn btn-wa">
-            Chat on WhatsApp
-          </a>
-          <a href="tel:03340011140" class="btn btn-outline">Call 033 4001 1140</a>
         </div>
       </div>
     </section>
@@ -424,28 +648,87 @@
         </p>
         <div class="brand-grid">
           <div class="brand-card">
-            <div class="brand-name">Roca</div>
-            <div class="brand-tag">Distributor &amp; WB Auth. Care</div>
+            <div class="brand-logo-box">
+              <span class="brand-name">Roca</span>
+            </div>
+            <div>
+              <div class="brand-name">Roca</div>
+              <div class="brand-tag">Distributor &amp; WB Auth. Care</div>
+            </div>
           </div>
+
           <div class="brand-card">
-            <div class="brand-name">Parryware</div>
-            <div class="brand-tag">Distributor &amp; WB Auth. Care</div>
+            <div class="brand-logo-box">
+              <img
+                src="./Untitled Design - 1.png"
+                alt="Parryware Logo"
+                class="brand-logo-img-card"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';"
+              />
+              <span class="brand-name" style="display:none;">Parryware</span>
+            </div>
+            <div>
+              <div class="brand-name">Parryware</div>
+              <div class="brand-tag">Distributor &amp; WB Auth. Care</div>
+            </div>
           </div>
+
           <div class="brand-card">
-            <div class="brand-name">Hansgrohe</div>
-            <div class="brand-tag">Bathroom Fittings</div>
+            <div class="brand-logo-box">
+              <img
+                src="./Hansgrohe-Logo.png"
+                alt="Hansgrohe Logo"
+                class="brand-logo-img-card"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';"
+              />
+              <span class="brand-name" style="display:none;">Hansgrohe</span>
+            </div>
+            <div>
+              <div class="brand-name">Hansgrohe</div>
+              <div class="brand-tag">Bathroom Fittings</div>
+            </div>
           </div>
+
           <div class="brand-card">
-            <div class="brand-name">Jaquar</div>
-            <div class="brand-tag">Bathroom Fittings</div>
+            <div class="brand-logo-box">
+              <img
+                src="./jaquar-bathroom-logo-1024x640.png"
+                alt="Jaquar Bathroom Logo"
+                class="brand-logo-img-card"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';"
+              />
+              <span class="brand-name" style="display:none;">Jaquar</span>
+            </div>
+            <div>
+              <div class="brand-name">Jaquar</div>
+              <div class="brand-tag">Bathroom Fittings</div>
+            </div>
           </div>
+
           <div class="brand-card">
-            <div class="brand-name">Cera</div>
-            <div class="brand-tag">Fittings &amp; Sanitaryware</div>
+            <div class="brand-logo-box">
+              <img
+                src="./Untitled Design - 1 (2).png"
+                alt="Cera Logo"
+                class="brand-logo-img-card"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';"
+              />
+              <span class="brand-name" style="display:none;">Cera</span>
+            </div>
+            <div>
+              <div class="brand-name">Cera</div>
+              <div class="brand-tag">Fittings &amp; Sanitaryware</div>
+            </div>
           </div>
+
           <div class="brand-card">
-            <div class="brand-name">Jayna</div>
-            <div class="brand-tag">Bathroom Fittings</div>
+            <div class="brand-logo-box">
+              <span class="brand-name">Jayna</span>
+            </div>
+            <div>
+              <div class="brand-name">Jayna</div>
+              <div class="brand-tag">Bathroom Fittings</div>
+            </div>
           </div>
         </div>
         <div class="callout">
@@ -454,30 +737,180 @@
       </div>
     </section>
 
-    <section id="services">
+    <section id="catalogue">
       <div class="container">
-        <h2 class="section-title">Showroom, Renovation &amp; Wholesale</h2>
+        <h2 class="section-title">Product &amp; Renovation Catalogue</h2>
         <p class="section-sub">
-          Supporting individual homeowners, contractors, builders, and bulk buyers from Purbachal Main Road, Haltu.
+          Sample mock catalogue items are shown below—filter by category, click <strong>Enquire / Book</strong> to pre-fill the booking form, or use the builder box below to add new items later.
         </p>
-        <div class="grid-3">
+
+        <div class="filter-bar" role="group" aria-label="Filter catalogue by category">
+          <button type="button" class="filter-btn active" data-filter="All">All Items</button>
+          <button type="button" class="filter-btn" data-filter="Sanitaryware">Sanitaryware</button>
+          <button type="button" class="filter-btn" data-filter="Showers &amp; Fittings">Showers &amp; Fittings</button>
+          <button type="button" class="filter-btn" data-filter="Renovation">Renovation</button>
+        </div>
+
+        <div id="catalogueGrid" class="grid-3"></div>
+
+        <!-- Future Catalogue Expansion / Addition Space -->
+        <div class="card" style="margin-top: 28px;">
+          <h3>Add Catalogue Item (Future Catalogue Space)</h3>
+          <p style="margin-bottom: 14px;">
+            Add new catalogue items right here to preview them in the grid, or reset back to the starter mock catalogue.
+          </p>
+          <form id="addCatalogueForm">
+            <div class="form-grid">
+              <div class="field">
+                <label for="catTitle">Product / Package Name</label>
+                <input type="text" id="catTitle" placeholder="e.g., Roca One-Piece Rimless EWC" required />
+              </div>
+              <div class="field">
+                <label for="catBrand">Brand</label>
+                <select id="catBrand">
+                  <option value="Roca">Roca</option>
+                  <option value="Parryware">Parryware</option>
+                  <option value="Hansgrohe">Hansgrohe</option>
+                  <option value="Jaquar">Jaquar</option>
+                  <option value="Cera">Cera</option>
+                  <option value="Jayna">Jayna</option>
+                  <option value="Bathkit">Bathkit</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="catCategory">Category</label>
+                <select id="catCategory">
+                  <option value="Sanitaryware">Sanitaryware</option>
+                  <option value="Showers &amp; Fittings">Showers &amp; Fittings</option>
+                  <option value="Renovation">Renovation</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="catPrice">Indicative Price / Note</label>
+                <input type="text" id="catPrice" placeholder="e.g., Sample Price · On Request" />
+              </div>
+            </div>
+            <div class="form-grid">
+              <div class="field">
+                <label for="catImage">Image URL (Optional)</label>
+                <input type="url" id="catImage" placeholder="https://..." />
+              </div>
+              <div class="field">
+                <label for="catDesc">Short Description</label>
+                <input type="text" id="catDesc" placeholder="Finish, model type, or installation note" required />
+              </div>
+            </div>
+            <div class="hero-actions">
+              <button type="submit" class="btn btn-sm">Add to Catalogue Preview</button>
+              <button type="button" id="resetCatalogueBtn" class="btn btn-sm btn-outline">Reset Mock Items</button>
+            </div>
+          </form>
+          <div id="catalogueStatus" class="status-box"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="booking">
+      <div class="container">
+        <h2 class="section-title">Book Showroom Visit, Renovation or Service</h2>
+        <p class="section-sub">
+          Schedule a showroom consultation, bathroom renovation discussion, or Roca &amp; Parryware customer care request at Haltu, Kolkata.
+        </p>
+
+        <div class="grid-2">
           <div class="card">
-            <h3>Showroom &amp; Authorised Care</h3>
-            <p>
-              Browse Hansgrohe, Jaquar, Cera, Jayna, Parryware, and Roca fittings and sanitaryware, backed by authorised Roca and Parryware customer care service across West Bengal.
-            </p>
+            <h3>Appointment &amp; Service Booking Form</h3>
+            <form id="bookingForm" style="margin-top: 12px;">
+              <div class="form-grid">
+                <div class="field">
+                  <label for="bookName">Your Name</label>
+                  <input type="text" id="bookName" placeholder="Full name" required />
+                </div>
+                <div class="field">
+                  <label for="bookPhone">Phone / WhatsApp Number</label>
+                  <input type="tel" id="bookPhone" placeholder="10-digit mobile number" required />
+                </div>
+              </div>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="bookType">Booking Type</label>
+                  <select id="bookType">
+                    <option value="Showroom Visit">Showroom Visit</option>
+                    <option value="Bathroom Renovation Consultation">Bathroom Renovation Consultation</option>
+                    <option value="Roca / Parryware Authorised Care">Roca / Parryware Authorised Care</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="bookDate">Preferred Date</label>
+                  <input type="date" id="bookDate" required />
+                </div>
+              </div>
+              <div class="field" style="margin-bottom: 14px;">
+                <label for="bookNotes">Requirement / Product / Location Details</label>
+                <textarea id="bookNotes" rows="3" placeholder="Mention brand preference, renovation scope, or service issue..."></textarea>
+              </div>
+              <div class="hero-actions">
+                <button type="submit" class="btn">Confirm Booking Request</button>
+                <button type="button" id="sendBookingWaBtn" class="btn btn-wa">Send via WhatsApp</button>
+              </div>
+            </form>
+            <div id="bookingStatus" class="status-box"></div>
           </div>
+
           <div class="card">
-            <h3>Bathroom Renovations</h3>
-            <p>
-              We renovate bathrooms—helping you plan upgrades, coordinate fittings and sanitaryware, and refresh existing spaces smoothly.
-            </p>
+            <h3>What to Expect When You Book</h3>
+            <ul class="info-list" style="margin-top: 12px;">
+              <li>
+                <span class="info-label">1. Showroom Walkthrough</span>
+                Compare fittings and sanitaryware across Roca, Parryware, Hansgrohe, Jaquar, Cera, and Jayna in person.
+              </li>
+              <li>
+                <span class="info-label">2. Renovation Guidance</span>
+                Discuss bathroom layout upgrades, fixture compatibility, and practical material selection.
+              </li>
+              <li>
+                <span class="info-label">3. Authorised West Bengal Care</span>
+                Get support aligned with authorised Roca and Parryware customer care processes.
+              </li>
+              <li>
+                <span class="info-label">4. Showroom Hours</span>
+                Open daily until 8:00 PM at 202, Purbachal Main Rd, Haltu, Kolkata 700078.
+              </li>
+            </ul>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="enquiries">
+      <div class="container">
+        <h2 class="section-title">Bulk Order &amp; Project Enquiries</h2>
+        <p class="section-sub">
+          Dedicated contact channels for bulk order stock requirements and builder/commercial project requirements.
+        </p>
+
+        <div class="grid-2">
           <div class="card">
-            <h3>Wholesale Supply</h3>
+            <h3>Bulk Order Enquiry</h3>
             <p>
-              We do wholesale also—supplying builders, plumbers, retailers, and project buyers with dependable stock and distribution support.
+              For bulk order stock, retail replenishment, and volume orders of bathroom fittings and sanitaryware, call our main showroom number:
             </p>
+            <a href="tel:03340011140" class="enquiry-number">033 4001 1140</a>
+            <div class="hero-actions">
+              <a href="tel:03340011140" class="btn">Call 033 4001 1140</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Project Enquiry</h3>
+            <p>
+              For residential housing projects, commercial developments, architects, contractors, and multi-unit project supply, reach our project desk directly:
+            </p>
+            <a href="tel:8697931751" class="enquiry-number">8697931751</a>
+            <div class="hero-actions">
+              <a href="tel:8697931751" class="btn">Call 8697931751</a>
+              <a href="https://wa.me/918697931751?text=Hello%20Bathkit%2C%20I%20have%20a%20project%20enquiry." target="_blank" rel="noopener noreferrer" class="btn btn-wa btn-sm">Bathkit Project WhatsApp</a>
+            </div>
           </div>
         </div>
       </div>
@@ -487,7 +920,7 @@
       <div class="container">
         <h2 class="section-title">Customer Ratings &amp; Reviews</h2>
         <p class="section-sub">
-          Rated <strong>5.0 / 5</strong> across the featured Google reviews below:
+          Rated <strong>4.9 / 5</strong> across <strong>213 reviews</strong> for Bathkit A unit of Parryscare Kalikapur Branch:
           <a href="https://www.google.com/maps/search/?api=1&query=202,+Purbachal+Main+Rd,+Sukhpally,+Haltu,+Kolkata,+West+Bengal+700078" target="_blank" rel="noopener noreferrer" class="link-inline">
             View on Google Maps
           </a>
@@ -523,39 +956,43 @@
             <ul class="info-list">
               <li>
                 <span class="info-label">Address</span>
-                202, Purbachal Main Rd, Sukhpally, Haltu, Kolkata, West Bengal 700078
+                202, Purbachal Main Rd, Sukhpally, Haltu, Kolkata, West Bengal 700078, India
               </li>
               <li>
-                <span class="info-label">Phone Number</span>
+                <span class="info-label">Call Number (Calls Only · Bulk Order &amp; Showroom)</span>
                 <a href="tel:03340011140" class="link-inline">033 4001 1140</a>
               </li>
               <li>
+                <span class="info-label">Project Enquiry Number</span>
+                <a href="tel:8697931751" class="link-inline">8697931751</a>
+              </li>
+              <li>
                 <span class="info-label">WhatsApp</span>
-                <a href="https://wa.me/913340011140?text=Hello%20Bathkit%2C%20I%20would%20like%20to%20connect%20with%20your%20showroom." target="_blank" rel="noopener noreferrer" class="link-inline">
-                  https://wa.me/913340011140
+                <a href="https://wa.me/918697931751?text=Hello%20Bathkit%2C%20I%20would%20like%20to%20connect%20with%20your%20showroom." target="_blank" rel="noopener noreferrer" class="link-inline">
+                  Bathkit WhatsApp Contact
                 </a>
+              </li>
+              <li>
+                <span class="info-label">Rating &amp; Reviews</span>
+                4.9 &#9733; · 213 reviews
               </li>
               <li>
                 <span class="info-label">Hours</span>
                 Open · Closes 8:00 PM
-              </li>
-              <li>
-                <span class="info-label">Rating</span>
-                5.0 / 5 (from featured customer reviews)
               </li>
             </ul>
           </div>
           <div class="card">
             <h3>Directions &amp; Quick Contact</h3>
             <p style="margin-bottom: 18px;">
-              Bathkit (a unit of Parry's Care) is located at 202, Purbachal Main Rd, Sukhpally, Haltu, Kolkata 700078. Open until 8:00 PM for retail, wholesale, renovation queries, and Roca &amp; Parryware support.
+              Bathkit A unit of Parryscare (Kalikapur Branch) is located at 202, Purbachal Main Rd, Sukhpally, Haltu, Kolkata, West Bengal 700078, India. Open until 8:00 PM for retail, bulk order supply, project supply, renovation queries, and Roca &amp; Parryware support.
             </p>
             <div class="hero-actions">
               <a class="btn" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=202,+Purbachal+Main+Rd,+Sukhpally,+Haltu,+Kolkata,+West+Bengal+700078">
                 Open in Google Maps
               </a>
-              <a class="btn btn-wa" target="_blank" rel="noopener noreferrer" href="https://wa.me/913340011140?text=Hello%20Bathkit%2C%20I%20would%20like%20to%20visit%20or%20enquire%20about%20products.">
-                WhatsApp Inquiry
+              <a class="btn btn-wa" target="_blank" rel="noopener noreferrer" href="https://wa.me/918697931751?text=Hello%20Bathkit%2C%20I%20would%20like%20to%20visit%20or%20enquire%20about%20products.">
+                Bathkit WhatsApp Contact
               </a>
             </div>
           </div>
@@ -570,15 +1007,220 @@
       <div>
         202, Purbachal Main Rd, Haltu, Kolkata 700078 &middot;
         <a href="tel:03340011140" class="link-inline">033 4001 1140</a> &middot;
-        <a href="https://wa.me/913340011140" target="_blank" rel="noopener noreferrer" class="link-inline">
-          WhatsApp
-        </a>
+        Project &amp; WhatsApp: <a href="tel:8697931751" class="link-inline">8697931751</a>
       </div>
     </div>
   </footer>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    const STORAGE_KEY = "bathkit_catalogue_draft_v1";
+
+    // Starter mock catalogue data (replace or extend later)
+    const defaultCatalogueItems = [
+      {
+        id: "BK-101",
+        title: "Chrome Basin Faucet & Ceramic Bowl Set",
+        brand: "Roca",
+        category: "Sanitaryware",
+        price: "Sample Price · On Request",
+        image: "https://image.made-in-china.com/202f0j00IJRWsTNyPAqd/Sanitary-Ware-Modern-Bathroom-Waterfall-Single-Handle-Brass-Chrome-Wash-Basin-Faucet.webp",
+        description: "Mock item: Sleek chrome mixer tap paired with a modern ceramic wash basin for residential or hospitality baths."
+      },
+      {
+        id: "BK-102",
+        title: "Overhead Rain Shower & Wall Mixer Setup",
+        brand: "Hansgrohe",
+        category: "Showers & Fittings",
+        price: "Sample Price · On Request",
+        image: "https://bassino.in/cdn/shop/files/Matte_Black_Rain_Shower_System_with_Hand_Shower1_1200x1200.png?v=1781789646",
+        description: "Mock item: Overhead rain shower and hand-shower combination with mixer fittings for modern bathrooms."
+      },
+      {
+        id: "BK-103",
+        title: "Vanity Sink, Mirror & Mixer Ensemble",
+        brand: "Jaquar",
+        category: "Showers & Fittings",
+        price: "Sample Price · On Request",
+        image: "https://s7d1.scene7.com/is/image/kohlergbhcloudprod/Three-Up-(3-UP)-Content-aah22545_rgb-1:Three-Up-Content-Mobile-Landscape-Giant?wid=313&hei=416&dpr=off",
+        description: "Mock item: Coordinated basin sink, faucet, and mirror layout for modern apartment and home bathrooms."
+      },
+      {
+        id: "BK-104",
+        title: "Parryware Sanitaryware & Fittings Pack",
+        brand: "Parryware",
+        category: "Sanitaryware",
+        price: "Sample Price · On Request",
+        image: "https://image.made-in-china.com/202f0j00IJRWsTNyPAqd/Sanitary-Ware-Modern-Bathroom-Waterfall-Single-Handle-Brass-Chrome-Wash-Basin-Faucet.webp",
+        description: "Mock item: Everyday reliable sanitaryware and fittings option backed by authorised West Bengal service support."
+      },
+      {
+        id: "BK-105",
+        title: "Cera & Jayna Bath Fittings Bundle",
+        brand: "Cera",
+        category: "Showers & Fittings",
+        price: "Sample Price · On Request",
+        image: "https://s7d1.scene7.com/is/image/kohlergbhcloudprod/Three-Up-(3-UP)-Content-aah22545_rgb-1:Three-Up-Content-Mobile-Landscape-Giant?wid=313&hei=416&dpr=off",
+        description: "Mock item: Value fixture set for standard home upgrades, contractors, and bulk order buyers."
+      },
+      {
+        id: "BK-106",
+        title: "Complete Bathroom Renovation Package",
+        brand: "Bathkit",
+        category: "Renovation",
+        price: "Custom Quote",
+        image: "https://bassino.in/cdn/shop/files/Matte_Black_Rain_Shower_System_with_Hand_Shower1_1200x1200.png?v=1781789646",
+        description: "Mock item: End-to-end bathroom renovation guidance, sanitaryware & fittings selection, and showroom consultation."
+      }
+    ];
+
+    function loadSavedCatalogue() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return [...defaultCatalogueItems];
+        const parsed = JSON.parse(raw);
+        return Array.isArray(parsed) && parsed.length ? parsed : [...defaultCatalogueItems];
+      } catch (_) {
+        return [...defaultCatalogueItems];
+      }
+    }
+
+    function saveCatalogue() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(catalogueItems));
+      } catch (_) {
+        // Ignore storage quota errors in restricted browsers
+      }
+    }
+
+    let catalogueItems = loadSavedCatalogue();
+    let activeFilter = "All";
+
+    const catalogueGrid = document.getElementById("catalogueGrid");
+    const catalogueStatus = document.getElementById("catalogueStatus");
+
+    function escapeAttr(str) {
+      return String(str).replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+    }
+
+    function renderCatalogue() {
+      const filtered = activeFilter === "All"
+        ? catalogueItems
+        : catalogueItems.filter((item) => item.category === activeFilter);
+
+      if (!filtered.length) {
+        catalogueGrid.innerHTML = `<div class="card"><p>No items in "${activeFilter}" yet.</p></div>`;
+      } else {
+        catalogueGrid.innerHTML = filtered.map((item) => `
+          <article class="catalogue-card">
+            <img src="${escapeAttr(item.image)}" alt="${escapeAttr(item.title)}" class="catalogue-img" loading="lazy" />
+            <div class="catalogue-body">
+              <div class="catalogue-meta">
+                <span>${item.brand} &middot; ${item.id}</span>
+                <span>${item.category}</span>
+              </div>
+              <div class="catalogue-title">${item.title}</div>
+              <p class="catalogue-desc">${item.description}</p>
+              <div class="catalogue-footer">
+                <span class="price-tag">${item.price}</span>
+                <button type="button" class="btn btn-sm enquire-item-btn" data-item-title="${escapeAttr(item.title)}">Enquire / Book</button>
+              </div>
+            </div>
+          </article>
+        `).join("");
+      }
+
+      document.querySelectorAll(".enquire-item-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const itemName = btn.getAttribute("data-item-title");
+          const notes = document.getElementById("bookNotes");
+          if (!notes.value.includes(itemName)) {
+            notes.value = notes.value
+              ? `${notes.value} | Interested in: ${itemName}`
+              : `Interested in: ${itemName}`;
+          }
+          document.getElementById("booking").scrollIntoView({ behavior: "smooth" });
+        });
+      });
+    }
+
+    document.querySelectorAll(".filter-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".filter-btn").forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+        activeFilter = btn.getAttribute("data-filter");
+        renderCatalogue();
+      });
+    });
+
+    document.getElementById("addCatalogueForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const title = document.getElementById("catTitle").value.trim();
+      const brand = document.getElementById("catBrand").value;
+      const category = document.getElementById("catCategory").value;
+      const price = document.getElementById("catPrice").value.trim() || "Sample Price · On Request";
+      const imageInput = document.getElementById("catImage").value.trim();
+      const image = imageInput || "https://image.made-in-china.com/202f0j00IJRWsTNyPAqd/Sanitary-Ware-Modern-Bathroom-Waterfall-Single-Handle-Brass-Chrome-Wash-Basin-Faucet.webp";
+      const description = document.getElementById("catDesc").value.trim();
+
+      const newItem = {
+        id: `BK-${100 + catalogueItems.length + 1}`,
+        title,
+        brand,
+        category,
+        price,
+        image,
+        description
+      };
+
+      catalogueItems.push(newItem);
+      saveCatalogue();
+      activeFilter = "All";
+      document.querySelectorAll(".filter-btn").forEach((b) => {
+        b.classList.toggle("active", b.getAttribute("data-filter") === "All");
+      });
+      renderCatalogue();
+      e.target.reset();
+
+      catalogueStatus.style.display = "block";
+      catalogueStatus.textContent = `Added "${newItem.title}" (${newItem.id}) to the preview catalogue.`;
+    });
+
+    document.getElementById("resetCatalogueBtn").addEventListener("click", () => {
+      catalogueItems = [...defaultCatalogueItems];
+      saveCatalogue();
+      renderCatalogue();
+      catalogueStatus.style.display = "block";
+      catalogueStatus.textContent = "Catalogue reset to initial mock items.";
+    });
+
+    // Booking Form Logic
+    function buildBookingMessage() {
+      const name = document.getElementById("bookName").value.trim() || "Customer";
+      const phone = document.getElementById("bookPhone").value.trim() || "Not provided";
+      const type = document.getElementById("bookType").value;
+      const date = document.getElementById("bookDate").value || "Flexible";
+      const notes = document.getElementById("bookNotes").value.trim() || "General enquiry";
+      return `Hello Bathkit (Parry's Care), booking request:\nName: ${name}\nPhone: ${phone}\nType: ${type}\nPreferred Date: ${date}\nDetails: ${notes}`;
+    }
+
+    document.getElementById("bookingForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const name = document.getElementById("bookName").value.trim();
+      const type = document.getElementById("bookType").value;
+      const date = document.getElementById("bookDate").value;
+      const status = document.getElementById("bookingStatus");
+      status.style.display = "block";
+      status.textContent = `Booking request noted for ${name} (${type} on ${date}). Tap "Send via WhatsApp" (8697931751) or call 033 4001 1140 to confirm immediately.`;
+    });
+
+    document.getElementById("sendBookingWaBtn").addEventListener("click", () => {
+      const msg = encodeURIComponent(buildBookingMessage());
+      window.open(`https://wa.me/918697931751?text=${msg}`, "_blank", "noopener,noreferrer");
+    });
+
+    renderCatalogue();
   </script>
 </body>
 </html>
