@@ -6,18 +6,19 @@
   <title>Bathkit — Branded Bathroom Fittings, Sanitaryware &amp; Service in Kolkata</title>
   <style>
     :root {
-      --bg: #f4f6fb;
-      --surface: #ffffff;
-      --surface-alt: #eef2ff;
-      --ink: #111827;
-      --muted: #4b5563;
+      --bg: #171a21;
+      --surface: #1e232d;
+      --surface-alt: #252b38;
+      --ink: #f3f4f6;
+      --muted: #b8c2d4;
       --accent: #2541b2;
       --accent-dark: #172c7a;
-      --accent-soft: #e0e7ff;
-      --border: #d8e0f0;
+      --accent-light: #5b82f6;
+      --accent-lighter: #93c5fd;
+      --accent-soft: rgba(91, 130, 246, 0.16);
+      --border: #303848;
       --radius: 12px;
-      --shadow: 0 6px 20px rgba(17, 24, 39, 0.06);
-      --gh-raw: https://raw.githubusercontent.com/subhamghoshconsultant/Bathkit-website/main;
+      --shadow: 0 8px 24px rgba(10, 14, 24, 0.35);
     }
 
     * {
@@ -50,8 +51,8 @@
 
     /* Header / Nav */
     header {
-      background: var(--surface);
-      border-bottom: 2px solid var(--accent);
+      background: var(--surface-alt);
+      border-bottom: 2px solid var(--accent-light);
       position: sticky;
       top: 0;
       z-index: 20;
@@ -61,31 +62,32 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      min-height: 72px;
-      gap: 14px;
+      min-height: 84px;
+      gap: 16px;
       flex-wrap: wrap;
-      padding: 8px 0;
+      padding: 10px 0;
     }
 
     .brand-wrap {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
     }
 
     .brand-logo-link {
       display: inline-flex;
       align-items: center;
-      background: #ffffff;
-      padding: 6px 12px;
-      border-radius: 8px;
-      border: 1.5px solid var(--accent);
+      background: var(--surface);
+      padding: 8px 16px;
+      border-radius: 10px;
+      border: 2px solid var(--accent-light);
+      box-shadow: 0 4px 14px rgba(37, 65, 178, 0.25);
     }
 
     .brand-logo-img {
-      height: 42px;
+      height: 62px;
       width: auto;
-      max-width: 170px;
+      max-width: 240px;
       object-fit: contain;
       display: block;
     }
@@ -96,16 +98,16 @@
     }
 
     .brand {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       font-weight: 700;
       letter-spacing: -0.02em;
-      color: var(--ink);
+      color: var(--accent-lighter);
       line-height: 1.15;
     }
 
     .brand-sub {
-      font-size: 0.78rem;
-      color: var(--accent-dark);
+      font-size: 0.8rem;
+      color: var(--accent-light);
       font-weight: 600;
     }
 
@@ -113,13 +115,13 @@
       display: flex;
       gap: 16px;
       font-size: 0.92rem;
-      color: var(--ink);
+      color: var(--muted);
       font-weight: 500;
       flex-wrap: wrap;
     }
 
     nav a:hover {
-      color: var(--accent);
+      color: var(--accent-lighter);
     }
 
     .header-actions {
@@ -136,14 +138,14 @@
       border-radius: 8px;
       font-weight: 600;
       font-size: 0.92rem;
-      border: 1px solid var(--accent);
+      border: 1px solid var(--accent-light);
       cursor: pointer;
       transition: background 0.2s ease, border-color 0.2s ease;
     }
 
     .btn:hover {
       background: var(--accent-dark);
-      border-color: var(--accent-dark);
+      border-color: var(--accent-lighter);
     }
 
     .btn-sm {
@@ -152,31 +154,31 @@
     }
 
     .btn-outline {
-      background: var(--surface);
-      color: var(--ink);
-      border: 1.5px solid var(--accent);
+      background: var(--accent-soft);
+      color: var(--accent-lighter);
+      border: 1.5px solid var(--accent-light);
     }
 
     .btn-outline:hover {
-      background: var(--accent-soft);
-      color: var(--accent-dark);
+      background: var(--accent);
+      color: #ffffff;
     }
 
     .btn-wa {
-      background: #111827;
-      border-color: var(--accent);
+      background: #1e3a8a;
+      border-color: var(--accent-lighter);
       color: #ffffff;
     }
 
     .btn-wa:hover {
-      background: var(--accent-dark);
-      border-color: var(--accent-dark);
+      background: var(--accent-light);
+      color: var(--bg);
     }
 
     /* Hero */
     .hero {
       padding: 54px 0 44px;
-      background: var(--surface);
+      background: var(--surface-alt);
       border-bottom: 1px solid var(--border);
     }
 
@@ -190,20 +192,20 @@
     .badge {
       display: inline-block;
       background: var(--accent-soft);
-      color: var(--accent-dark);
+      color: var(--accent-lighter);
       font-size: 0.82rem;
       font-weight: 700;
       padding: 5px 12px;
       border-radius: 999px;
-      border: 1px solid var(--accent);
+      border: 1px solid var(--accent-light);
     }
 
     .rating-pill {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      background: #111827;
-      border: 1px solid var(--accent);
+      background: var(--accent);
+      border: 1px solid var(--accent-lighter);
       color: #ffffff;
       font-size: 0.84rem;
       font-weight: 600;
@@ -252,7 +254,7 @@
       font-size: 1.55rem;
       letter-spacing: -0.02em;
       margin-bottom: 8px;
-      color: var(--accent-dark);
+      color: var(--accent-lighter);
     }
 
     .section-sub {
@@ -282,17 +284,99 @@
     }
 
     .card {
-      background: var(--surface);
+      background: var(--surface-alt);
       border: 1px solid var(--border);
       border-radius: var(--radius);
       padding: 24px;
       box-shadow: var(--shadow);
     }
 
-    .brand-card {
-      background: var(--surface);
+    section:nth-of-type(even) .card {
+      background: var(--bg);
+    }
+
+    /* Video Showcase Cards */
+    .video-card {
+      background: var(--surface-alt);
       border: 1px solid var(--border);
-      border-top: 4px solid var(--accent);
+      border-top: 4px solid var(--accent-light);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+    }
+
+    section:nth-of-type(even) .video-card {
+      background: var(--bg);
+    }
+
+    .video-frame-wrap {
+      position: relative;
+      background: #10131a;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .showcase-video {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      display: block;
+      object-fit: cover;
+      background: #10131a;
+    }
+
+    .video-body {
+      padding: 20px 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex: 1;
+    }
+
+    .video-tag {
+      display: inline-block;
+      align-self: flex-start;
+      background: var(--accent-soft);
+      color: var(--accent-lighter);
+      border: 1px solid var(--accent-light);
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 999px;
+    }
+
+    .video-title {
+      font-size: 1.12rem;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .video-desc {
+      font-size: 0.92rem;
+      color: var(--muted);
+      flex: 1;
+    }
+
+    .video-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+      flex-wrap: wrap;
+    }
+
+    .video-caption-note {
+      font-size: 0.82rem;
+      color: var(--accent-lighter);
+      font-weight: 600;
+    }
+
+    .brand-card {
+      background: var(--surface-alt);
+      border: 1px solid var(--border);
+      border-top: 4px solid var(--accent-light);
       border-radius: var(--radius);
       padding: 18px 16px;
       text-align: center;
@@ -306,18 +390,18 @@
 
     .brand-logo-box {
       width: 100%;
-      height: 70px;
+      height: 72px;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: #ffffff;
-      border: 1px solid #cbd5e1;
+      background: var(--surface);
+      border: 1px solid var(--accent-light);
       border-radius: 8px;
       padding: 8px 12px;
     }
 
     .brand-logo-img-card {
-      max-height: 46px;
+      max-height: 48px;
       max-width: 100%;
       width: auto;
       object-fit: contain;
@@ -333,14 +417,14 @@
 
     .brand-tag {
       font-size: 0.8rem;
-      color: var(--accent);
+      color: var(--accent-lighter);
       font-weight: 600;
     }
 
     .card h3 {
       font-size: 1.12rem;
       margin-bottom: 8px;
-      color: var(--accent-dark);
+      color: var(--accent-lighter);
     }
 
     .card p {
@@ -350,7 +434,7 @@
 
     .callout {
       background: var(--surface-alt);
-      border-left: 4px solid var(--accent);
+      border-left: 4px solid var(--accent-light);
       border-top: 1px solid var(--border);
       border-right: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
@@ -362,7 +446,7 @@
     }
 
     .callout strong {
-      color: var(--accent-dark);
+      color: var(--accent-lighter);
     }
 
     /* Catalogue */
@@ -374,9 +458,9 @@
     }
 
     .filter-btn {
-      background: var(--surface);
-      color: var(--ink);
-      border: 1.5px solid var(--accent);
+      background: var(--surface-alt);
+      color: var(--accent-lighter);
+      border: 1.5px solid var(--accent-light);
       padding: 7px 14px;
       border-radius: 999px;
       font-size: 0.86rem;
@@ -389,10 +473,11 @@
     .filter-btn:hover {
       background: var(--accent);
       color: #ffffff;
+      border-color: var(--accent-lighter);
     }
 
     .catalogue-card {
-      background: var(--surface);
+      background: var(--surface-alt);
       border: 1px solid var(--border);
       border-radius: var(--radius);
       overflow: hidden;
@@ -406,7 +491,7 @@
       height: 195px;
       object-fit: cover;
       border-bottom: 1px solid var(--border);
-      background: var(--surface-alt);
+      background: var(--surface);
     }
 
     .catalogue-body {
@@ -424,7 +509,7 @@
       gap: 8px;
       font-size: 0.78rem;
       font-weight: 700;
-      color: var(--accent);
+      color: var(--accent-lighter);
     }
 
     .catalogue-title {
@@ -450,7 +535,7 @@
 
     .price-tag {
       font-weight: 700;
-      color: var(--accent-dark);
+      color: var(--accent-lighter);
       font-size: 0.92rem;
     }
 
@@ -471,7 +556,7 @@
     .field label {
       font-size: 0.84rem;
       font-weight: 600;
-      color: var(--ink);
+      color: var(--accent-lighter);
     }
 
     .field input,
@@ -479,9 +564,9 @@
     .field textarea {
       width: 100%;
       padding: 10px 12px;
-      border: 1px solid #cbd5e1;
+      border: 1px solid var(--border);
       border-radius: 8px;
-      background: #ffffff;
+      background: var(--bg);
       color: var(--ink);
       font-family: inherit;
       font-size: 0.92rem;
@@ -490,15 +575,15 @@
     .field input:focus,
     .field select:focus,
     .field textarea:focus {
-      outline: 2px solid var(--accent);
-      border-color: var(--accent);
+      outline: 2px solid var(--accent-light);
+      border-color: var(--accent-light);
     }
 
     .status-box {
       margin-top: 14px;
       padding: 12px 16px;
       border-radius: 8px;
-      border: 1.5px solid var(--accent);
+      border: 1.5px solid var(--accent-light);
       background: var(--accent-soft);
       color: var(--ink);
       font-size: 0.9rem;
@@ -509,14 +594,14 @@
     .enquiry-number {
       font-size: 1.2rem;
       font-weight: 700;
-      color: var(--accent);
+      color: var(--accent-lighter);
       margin: 8px 0 12px;
       display: block;
     }
 
     /* Reviews */
     .stars {
-      color: var(--accent);
+      color: var(--accent-light);
       font-size: 0.98rem;
       margin-bottom: 10px;
       letter-spacing: 1px;
@@ -531,7 +616,7 @@
     .reviewer {
       font-weight: 700;
       font-size: 0.9rem;
-      color: var(--accent-dark);
+      color: var(--accent-lighter);
     }
 
     /* Visit / Info */
@@ -552,28 +637,24 @@
       font-size: 0.8rem;
       text-transform: uppercase;
       letter-spacing: 0.04em;
-      color: var(--accent-dark);
+      color: var(--accent-light);
       margin-bottom: 2px;
     }
 
     .link-inline {
-      color: var(--accent);
+      color: var(--accent-lighter);
       font-weight: 600;
       text-decoration: underline;
       text-underline-offset: 2px;
     }
 
     footer {
-      background: #111827;
-      border-top: 3px solid var(--accent);
+      background: var(--surface-alt);
+      border-top: 3px solid var(--accent-light);
       padding: 28px 0;
       margin-top: 16px;
-      color: #e5e7eb;
+      color: var(--muted);
       font-size: 0.9rem;
-    }
-
-    footer .link-inline {
-      color: #93c5fd;
     }
 
     .footer-inner {
@@ -587,6 +668,11 @@
     @media (max-width: 680px) {
       nav {
         display: none;
+      }
+
+      .brand-logo-img {
+        height: 52px;
+        max-width: 195px;
       }
     }
   </style>
@@ -611,6 +697,7 @@
       </div>
       <nav aria-label="Primary Navigation">
         <a href="#brands">Brands</a>
+        <a href="#showcase">Care &amp; Living</a>
         <a href="#catalogue">Catalogue</a>
         <a href="#booking">Booking</a>
         <a href="#enquiries">Bulk Order &amp; Project</a>
@@ -752,6 +839,72 @@
         </div>
         <div class="callout">
           <strong>Bathkit is a unit of Parry's Care:</strong> We are distributors of <strong>Roca</strong> and <strong>Parryware</strong>, and we are the <strong>authorised customer care service provider of Roca and Parryware for the whole of West Bengal</strong>. Please feel free to visit our showroom for products, guidance, and service support.
+        </div>
+      </div>
+    </section>
+
+    <section id="showcase">
+      <div class="container">
+        <h2 class="section-title">Care &amp; Everyday Bathroom Living</h2>
+        <p class="section-sub">
+          See how regular upkeep keeps mirrors, sanitaryware, and mixers gleaming—and how quality fittings elevate everyday home routines.
+        </p>
+        <div class="grid-2">
+          <article class="video-card">
+            <div class="video-frame-wrap">
+              <video
+                class="showcase-video"
+                src="./video_1.mp4"
+                autoplay
+                muted
+                loop
+                playsinline
+                controls
+                preload="metadata"
+              >
+                Your browser does not support HTML5 video.
+              </video>
+            </div>
+            <div class="video-body">
+              <span class="video-tag">Care &amp; Maintenance</span>
+              <div class="video-title">&ldquo;Everything worth keeping requires maintenance.&rdquo;</div>
+              <p class="video-desc">
+                Routine cleaning and care help preserve mirror clarity, sanitaryware glaze, basin surfaces, and shower/faucet finishes over years of daily use.
+              </p>
+              <div class="video-footer">
+                <span class="video-caption-note">Roca &amp; Parryware West Bengal Care</span>
+                <a href="#booking" class="btn btn-sm">Book Service Visit</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="video-card">
+            <div class="video-frame-wrap">
+              <video
+                class="showcase-video"
+                src="./video_2.mp4"
+                autoplay
+                muted
+                loop
+                playsinline
+                controls
+                preload="metadata"
+              >
+                Your browser does not support HTML5 video.
+              </video>
+            </div>
+            <div class="video-body">
+              <span class="video-tag">Everyday Living &amp; Renovation</span>
+              <div class="video-title">Smooth Flow &amp; Welcoming Home Spaces</div>
+              <p class="video-desc">
+                From crisp basin mixers and morning routines to clean, well-kept bathroom spaces—explore fittings and renovation ideas suited for modern homes.
+              </p>
+              <div class="video-footer">
+                <span class="video-caption-note">Showroom &amp; Renovation Guidance</span>
+                <a href="#catalogue" class="btn btn-sm btn-outline">Explore Catalogue</a>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
