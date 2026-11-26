@@ -450,21 +450,6 @@
       display: none;
     }
 
-    .json-preview {
-      margin-top: 14px;
-      padding: 12px;
-      border-radius: 8px;
-      border: 1px solid var(--border);
-      background: #ffffff;
-      color: var(--ink);
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-      font-size: 0.8rem;
-      max-height: 220px;
-      overflow: auto;
-      white-space: pre-wrap;
-      display: none;
-    }
-
     /* Enquiry Cards */
     .enquiry-number {
       font-size: 1.2rem;
@@ -552,7 +537,7 @@
     <div class="container nav-inner">
       <div class="brand-wrap">
         <a href="#" class="brand">Bathkit</a>
-        <span class="brand-sub">A Unit of Parry's Care</span>
+        <span class="brand-sub">A Unit of Parry's Care · Kalikapur Branch</span>
       </div>
       <nav aria-label="Primary Navigation">
         <a href="#brands">Brands</a>
@@ -573,9 +558,10 @@
     <section class="hero">
       <div class="container">
         <div class="badge-row">
+          <span class="badge">A Unit of Parry's Care · Haltu, Kolkata</span>
           <span class="rating-pill" aria-label="4.9 out of 5 stars based on 213 Google reviews">
-  ★ 4.9 / 5 Rating (213 Google Reviews)
-</span>
+            &#9733; 4.9 / 5 Rating (213 Reviews)
+          </span>
         </div>
         <h1>Branded Bathroom Fittings, Sanitaryware &amp; Authorised Care</h1>
         <p>
@@ -633,7 +619,7 @@
       <div class="container">
         <h2 class="section-title">Product &amp; Renovation Catalogue</h2>
         <p class="section-sub">
-          Sample mock catalogue items are shown below—filter by category, click <strong>Enquire / Book</strong> to pre-fill the booking form, or use the builder box below to add new items and export JSON later.
+          Sample mock catalogue items are shown below—filter by category, click <strong>Enquire / Book</strong> to pre-fill the booking form, or use the builder box below to add new items later.
         </p>
 
         <div class="filter-bar" role="group" aria-label="Filter catalogue by category">
@@ -648,9 +634,9 @@
         <!-- Future Catalogue Expansion / Addition Space -->
         <div class="card" style="margin-top: 28px;">
           <h3>Add Catalogue Item (Future Catalogue Space)</h3>
-           <p style="margin-bottom: 14px;">
-            Add draft items right now to preview them in the grid for future.
-          </p> 
+          <p style="margin-bottom: 14px;">
+            Add new catalogue items right here to preview them in the grid, or reset back to the starter mock catalogue.
+          </p>
           <form id="addCatalogueForm">
             <div class="form-grid">
               <div class="field">
@@ -694,13 +680,10 @@
             </div>
             <div class="hero-actions">
               <button type="submit" class="btn btn-sm">Add to Catalogue Preview</button>
-              <button type="button" id="toggleJsonBtn" class="btn btn-sm btn-outline">For Future Development</button>
-              <button type="button" id="copyJsonBtn" class="btn btn-sm btn-outline">Copy Future Development</button>
-              <button type="button" id="resetCatalogueBtn" class="btn btn-sm btn-outline">Reset Items</button>
+              <button type="button" id="resetCatalogueBtn" class="btn btn-sm btn-outline">Reset Mock Items</button>
             </div>
           </form>
           <div id="catalogueStatus" class="status-box"></div>
-          <pre id="catalogueJsonOutput" class="json-preview"></pre>
         </div>
       </div>
     </section>
@@ -792,8 +775,8 @@
             </p>
             <a href="tel:03340011140" class="enquiry-number">033 4001 1140</a>
             <div class="hero-actions">
-  <a href="tel:03340011140" class="btn">Call 033 4001 1140</a>
-</div>
+              <a href="tel:03340011140" class="btn">Call 033 4001 1140</a>
+            </div>
           </div>
 
           <div class="card">
@@ -815,7 +798,7 @@
       <div class="container">
         <h2 class="section-title">Customer Ratings &amp; Reviews</h2>
         <p class="section-sub">
-  Rated <strong>4.9 / 5</strong> based on <strong>213 Google Reviews</strong>:
+          Rated <strong>4.9 / 5</strong> across <strong>213 reviews</strong> for Bathkit A unit of Parryscare Kalikapur Branch:
           <a href="https://www.google.com/maps/search/?api=1&query=202,+Purbachal+Main+Rd,+Sukhpally,+Haltu,+Kolkata,+West+Bengal+700078" target="_blank" rel="noopener noreferrer" class="link-inline">
             View on Google Maps
           </a>
@@ -851,7 +834,7 @@
             <ul class="info-list">
               <li>
                 <span class="info-label">Address</span>
-                202, Purbachal Main Rd, Sukhpally, Haltu, Kolkata, West Bengal 700078
+                202, Purbachal Main Rd, Sukhpally, Haltu, Kolkata, West Bengal 700078, India
               </li>
               <li>
                 <span class="info-label">Call Number (Calls Only · Bulk Order &amp; Showroom)</span>
@@ -868,6 +851,10 @@
                 </a>
               </li>
               <li>
+                <span class="info-label">Rating &amp; Reviews</span>
+                4.9 &#9733; · 213 reviews
+              </li>
+              <li>
                 <span class="info-label">Hours</span>
                 Open · Closes 8:00 PM
               </li>
@@ -876,7 +863,7 @@
           <div class="card">
             <h3>Directions &amp; Quick Contact</h3>
             <p style="margin-bottom: 18px;">
-              Bathkit (a unit of Parry's Care) is located at 202, Purbachal Main Rd, Sukhpally, Haltu, Kolkata 700078. Open until 8:00 PM for retail, bulk order supply, project supply, renovation queries, and Roca &amp; Parryware support.
+              Bathkit A unit of Parryscare (Kalikapur Branch) is located at 202, Purbachal Main Rd, Sukhpally, Haltu, Kolkata, West Bengal 700078, India. Open until 8:00 PM for retail, bulk order supply, project supply, renovation queries, and Roca &amp; Parryware support.
             </p>
             <div class="hero-actions">
               <a class="btn" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=202,+Purbachal+Main+Rd,+Sukhpally,+Haltu,+Kolkata,+West+Bengal+700078">
@@ -989,7 +976,6 @@
     let activeFilter = "All";
 
     const catalogueGrid = document.getElementById("catalogueGrid");
-    const jsonOutput = document.getElementById("catalogueJsonOutput");
     const catalogueStatus = document.getElementById("catalogueStatus");
 
     function escapeAttr(str) {
@@ -1035,10 +1021,6 @@
           document.getElementById("booking").scrollIntoView({ behavior: "smooth" });
         });
       });
-
-      if (jsonOutput.style.display === "block") {
-        jsonOutput.textContent = JSON.stringify(catalogueItems, null, 2);
-      }
     }
 
     document.querySelectorAll(".filter-btn").forEach((btn) => {
@@ -1081,30 +1063,6 @@
 
       catalogueStatus.style.display = "block";
       catalogueStatus.textContent = `Added "${newItem.title}" (${newItem.id}) to the preview catalogue.`;
-    });
-
-    document.getElementById("toggleJsonBtn").addEventListener("click", () => {
-      const isVisible = jsonOutput.style.display === "block";
-      if (!isVisible) {
-        jsonOutput.textContent = JSON.stringify(catalogueItems, null, 2);
-        jsonOutput.style.display = "block";
-      } else {
-        jsonOutput.style.display = "none";
-      }
-    });
-
-    document.getElementById("copyJsonBtn").addEventListener("click", async () => {
-      const text = JSON.stringify(catalogueItems, null, 2);
-      jsonOutput.textContent = text;
-      jsonOutput.style.display = "block";
-      try {
-        await navigator.clipboard.writeText(text);
-        catalogueStatus.style.display = "block";
-        catalogueStatus.textContent = "Catalogue JSON copied to clipboard.";
-      } catch (_) {
-        catalogueStatus.style.display = "block";
-        catalogueStatus.textContent = "JSON displayed below—select and copy manually if needed.";
-      }
     });
 
     document.getElementById("resetCatalogueBtn").addEventListener("click", () => {
