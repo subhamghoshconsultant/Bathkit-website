@@ -6,19 +6,19 @@
   <title>Bathkit — Branded Bathroom Fittings, Sanitaryware &amp; Service in Kolkata</title>
   <style>
     :root {
-      --bg: #171a21;
-      --surface: #1e232d;
-      --surface-alt: #252b38;
-      --ink: #f3f4f6;
-      --muted: #b8c2d4;
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --surface-alt: #eef2ff;
+      --ink: #111827;
+      --muted: #4b5563;
       --accent: #2541b2;
       --accent-dark: #172c7a;
-      --accent-light: #5b82f6;
-      --accent-lighter: #93c5fd;
-      --accent-soft: rgba(91, 130, 246, 0.16);
-      --border: #303848;
+      --accent-light: #3b66f5;
+      --accent-lighter: #1d4ed8;
+      --accent-soft: #e0e7ff;
+      --border: #dbe3f2;
       --radius: 12px;
-      --shadow: 0 8px 24px rgba(10, 14, 24, 0.35);
+      --shadow: 0 6px 20px rgba(23, 44, 122, 0.06);
     }
 
     * {
@@ -51,8 +51,8 @@
 
     /* Header / Nav */
     header {
-      background: var(--surface-alt);
-      border-bottom: 2px solid var(--accent-light);
+      background: var(--surface);
+      border-bottom: 2px solid var(--accent);
       position: sticky;
       top: 0;
       z-index: 20;
@@ -80,8 +80,8 @@
       background: var(--surface);
       padding: 10px 20px;
       border-radius: 12px;
-      border: 2px solid var(--accent-lighter);
-      box-shadow: 0 6px 18px rgba(37, 65, 178, 0.35);
+      border: 2px solid var(--accent);
+      box-shadow: 0 6px 18px rgba(37, 65, 178, 0.14);
     }
 
     .brand-logo-img {
@@ -101,13 +101,13 @@
       font-size: 1.38rem;
       font-weight: 700;
       letter-spacing: -0.02em;
-      color: var(--accent-lighter);
+      color: var(--ink);
       line-height: 1.15;
     }
 
     .brand-sub {
       font-size: 0.82rem;
-      color: var(--accent-light);
+      color: var(--accent);
       font-weight: 600;
     }
 
@@ -121,7 +121,7 @@
     }
 
     nav a:hover {
-      color: var(--accent-lighter);
+      color: var(--accent);
     }
 
     .header-actions {
@@ -138,14 +138,14 @@
       border-radius: 8px;
       font-weight: 600;
       font-size: 0.92rem;
-      border: 1px solid var(--accent-light);
+      border: 1px solid var(--accent);
       cursor: pointer;
       transition: background 0.2s ease, border-color 0.2s ease;
     }
 
     .btn:hover {
       background: var(--accent-dark);
-      border-color: var(--accent-lighter);
+      border-color: var(--accent-dark);
     }
 
     .btn-sm {
@@ -154,31 +154,31 @@
     }
 
     .btn-outline {
-      background: var(--accent-soft);
-      color: var(--accent-lighter);
-      border: 1.5px solid var(--accent-light);
+      background: var(--surface);
+      color: var(--accent);
+      border: 1.5px solid var(--accent);
     }
 
     .btn-outline:hover {
-      background: var(--accent);
-      color: #ffffff;
+      background: var(--accent-soft);
+      color: var(--accent-dark);
     }
 
     .btn-wa {
-      background: #1e3a8a;
-      border-color: var(--accent-lighter);
+      background: var(--accent-light);
+      border-color: var(--accent);
       color: #ffffff;
     }
 
     .btn-wa:hover {
-      background: var(--accent-light);
-      color: var(--bg);
+      background: var(--accent-dark);
+      border-color: var(--accent-dark);
     }
 
     /* Hero */
     .hero {
       padding: 54px 0 44px;
-      background: var(--surface-alt);
+      background: var(--surface);
       border-bottom: 1px solid var(--border);
     }
 
@@ -192,7 +192,7 @@
     .badge {
       display: inline-block;
       background: var(--accent-soft);
-      color: var(--accent-lighter);
+      color: var(--accent-dark);
       font-size: 0.82rem;
       font-weight: 700;
       padding: 5px 12px;
@@ -205,7 +205,7 @@
       align-items: center;
       gap: 6px;
       background: var(--accent);
-      border: 1px solid var(--accent-lighter);
+      border: 1px solid var(--accent-dark);
       color: #ffffff;
       font-size: 0.84rem;
       font-weight: 600;
@@ -254,7 +254,7 @@
       font-size: 1.55rem;
       letter-spacing: -0.02em;
       margin-bottom: 8px;
-      color: var(--accent-lighter);
+      color: var(--accent);
     }
 
     .section-sub {
@@ -284,7 +284,7 @@
     }
 
     .card {
-      background: var(--surface-alt);
+      background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius);
       padding: 24px;
@@ -297,9 +297,9 @@
 
     /* Video Showcase Cards */
     .video-card {
-      background: var(--surface-alt);
+      background: var(--surface);
       border: 1px solid var(--border);
-      border-top: 4px solid var(--accent-light);
+      border-top: 4px solid var(--accent);
       border-radius: var(--radius);
       overflow: hidden;
       box-shadow: var(--shadow);
@@ -313,16 +313,15 @@
 
     .video-frame-wrap {
       position: relative;
-      background: #10131a;
+      background: var(--surface-alt);
       border-bottom: 1px solid var(--border);
     }
 
     .showcase-video {
-      width: 100%;
-      aspect-ratio: 16 / 9;
       display: block;
+      aspect-ratio: 16 / 9;
       object-fit: cover;
-      background: #10131a;
+      background: var(--surface-alt);
     }
 
     .video-body {
@@ -337,7 +336,7 @@
       display: inline-block;
       align-self: flex-start;
       background: var(--accent-soft);
-      color: var(--accent-lighter);
+      color: var(--accent-dark);
       border: 1px solid var(--accent-light);
       font-size: 0.76rem;
       font-weight: 700;
@@ -369,14 +368,14 @@
 
     .video-caption-note {
       font-size: 0.82rem;
-      color: var(--accent-lighter);
+      color: var(--accent);
       font-weight: 600;
     }
 
     .brand-card {
-      background: var(--surface-alt);
+      background: var(--surface);
       border: 1px solid var(--border);
-      border-top: 4px solid var(--accent-light);
+      border-top: 4px solid var(--accent);
       border-radius: var(--radius);
       padding: 18px 16px;
       text-align: center;
@@ -394,8 +393,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: var(--surface);
-      border: 1px solid var(--accent-light);
+      background: var(--surface-alt);
+      border: 1px solid var(--border);
       border-radius: 8px;
       padding: 8px 12px;
     }
@@ -424,14 +423,14 @@
 
     .brand-tag {
       font-size: 0.8rem;
-      color: var(--accent-lighter);
+      color: var(--accent);
       font-weight: 600;
     }
 
     .card h3 {
       font-size: 1.12rem;
       margin-bottom: 8px;
-      color: var(--accent-lighter);
+      color: var(--accent);
     }
 
     .card p {
@@ -441,7 +440,7 @@
 
     .callout {
       background: var(--surface-alt);
-      border-left: 4px solid var(--accent-light);
+      border-left: 4px solid var(--accent);
       border-top: 1px solid var(--border);
       border-right: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
@@ -453,7 +452,7 @@
     }
 
     .callout strong {
-      color: var(--accent-lighter);
+      color: var(--accent-dark);
     }
 
     /* Catalogue */
@@ -465,9 +464,9 @@
     }
 
     .filter-btn {
-      background: var(--surface-alt);
-      color: var(--accent-lighter);
-      border: 1.5px solid var(--accent-light);
+      background: var(--surface);
+      color: var(--accent);
+      border: 1.5px solid var(--accent);
       padding: 7px 14px;
       border-radius: 999px;
       font-size: 0.86rem;
@@ -480,11 +479,10 @@
     .filter-btn:hover {
       background: var(--accent);
       color: #ffffff;
-      border-color: var(--accent-lighter);
     }
 
     .catalogue-card {
-      background: var(--surface-alt);
+      background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius);
       overflow: hidden;
@@ -498,7 +496,7 @@
       height: 195px;
       object-fit: cover;
       border-bottom: 1px solid var(--border);
-      background: var(--surface);
+      background: var(--surface-alt);
     }
 
     .catalogue-body {
@@ -516,7 +514,7 @@
       gap: 8px;
       font-size: 0.78rem;
       font-weight: 700;
-      color: var(--accent-lighter);
+      color: var(--accent);
     }
 
     .catalogue-title {
@@ -542,7 +540,7 @@
 
     .price-tag {
       font-weight: 700;
-      color: var(--accent-lighter);
+      color: var(--accent-dark);
       font-size: 0.92rem;
     }
 
@@ -563,7 +561,7 @@
     .field label {
       font-size: 0.84rem;
       font-weight: 600;
-      color: var(--accent-lighter);
+      color: var(--accent-dark);
     }
 
     .field input,
@@ -573,7 +571,7 @@
       padding: 10px 12px;
       border: 1px solid var(--border);
       border-radius: 8px;
-      background: var(--bg);
+      background: var(--surface);
       color: var(--ink);
       font-family: inherit;
       font-size: 0.92rem;
@@ -582,15 +580,15 @@
     .field input:focus,
     .field select:focus,
     .field textarea:focus {
-      outline: 2px solid var(--accent-light);
-      border-color: var(--accent-light);
+      outline: 2px solid var(--accent);
+      border-color: var(--accent);
     }
 
     .status-box {
       margin-top: 14px;
       padding: 12px 16px;
       border-radius: 8px;
-      border: 1.5px solid var(--accent-light);
+      border: 1.5px solid var(--accent);
       background: var(--accent-soft);
       color: var(--ink);
       font-size: 0.9rem;
@@ -601,14 +599,14 @@
     .enquiry-number {
       font-size: 1.2rem;
       font-weight: 700;
-      color: var(--accent-lighter);
+      color: var(--accent);
       margin: 8px 0 12px;
       display: block;
     }
 
     /* Reviews */
     .stars {
-      color: var(--accent-light);
+      color: var(--accent);
       font-size: 0.98rem;
       margin-bottom: 10px;
       letter-spacing: 1px;
@@ -623,7 +621,7 @@
     .reviewer {
       font-weight: 700;
       font-size: 0.9rem;
-      color: var(--accent-lighter);
+      color: var(--accent-dark);
     }
 
     /* Visit / Info */
@@ -644,12 +642,12 @@
       font-size: 0.8rem;
       text-transform: uppercase;
       letter-spacing: 0.04em;
-      color: var(--accent-light);
+      color: var(--accent);
       margin-bottom: 2px;
     }
 
     .link-inline {
-      color: var(--accent-lighter);
+      color: var(--accent);
       font-weight: 600;
       text-decoration: underline;
       text-underline-offset: 2px;
@@ -657,7 +655,7 @@
 
     footer {
       background: var(--surface-alt);
-      border-top: 3px solid var(--accent-light);
+      border-top: 2px solid var(--accent);
       padding: 28px 0;
       margin-top: 16px;
       color: var(--muted);
@@ -751,8 +749,8 @@
           <div class="brand-card">
             <div class="brand-logo-box">
               <svg class="brand-svg-logo" viewBox="0 0 180 56" role="img" aria-label="Roca Logo">
-                <text x="90" y="34" text-anchor="middle" fill="#93c5fd" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="800" letter-spacing="2">ROCA</text>
-                <rect x="28" y="42" width="56" height="4" rx="2" fill="#5b82f6" />
+                <text x="90" y="34" text-anchor="middle" fill="#172c7a" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="800" letter-spacing="2">ROCA</text>
+                <rect x="28" y="42" width="56" height="4" rx="2" fill="#3b66f5" />
                 <rect x="92" y="42" width="60" height="4" rx="2" fill="#2541b2" />
               </svg>
             </div>
@@ -829,7 +827,7 @@
           <div class="brand-card">
             <div class="brand-logo-box">
               <svg class="brand-svg-logo" viewBox="0 0 180 56" role="img" aria-label="Jayna Logo">
-                <rect x="18" y="10" width="144" height="36" rx="7" fill="#2541b2" stroke="#5b82f6" stroke-width="1.5" />
+                <rect x="18" y="10" width="144" height="36" rx="7" fill="#2541b2" stroke="#172c7a" stroke-width="1.5" />
                 <text x="90" y="34" text-anchor="middle" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="800" letter-spacing="4">JAYNA</text>
               </svg>
             </div>
@@ -849,30 +847,21 @@
       <div class="container">
         <h2 class="section-title">Care &amp; Everyday Bathroom Living</h2>
         <p class="section-sub">
-          Short-form reels showing how regular upkeep keeps mirrors, sanitaryware, and mixers gleaming—and how quality fittings elevate everyday home routines.
+          Autoplay videos highlighting regular upkeep for mirrors, sanitaryware, and mixers—and how quality fittings support everyday home routines.
         </p>
         <div class="grid-2">
           <article class="video-card">
             <div class="video-frame-wrap">
-              <video
-                class="showcase-video short-reel"
-                src="./video_1.mp4"
-                data-short-loop="10"
-                autoplay
-                muted
-                loop
-                playsinline
-                controls
-                preload="metadata"
-              >
-                Your browser does not support HTML5 video.
+              <video class="showcase-video" width="100%" autoplay muted loop playsinline>
+                <source src="./video_1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
               </video>
             </div>
             <div class="video-body">
-              <span class="video-tag">Short Reel · Care &amp; Maintenance</span>
+              <span class="video-tag">Care &amp; Maintenance</span>
               <div class="video-title">&ldquo;Everything worth keeping requires maintenance.&rdquo;</div>
               <p class="video-desc">
-                Quick look at how routine care helps preserve mirror clarity, sanitaryware glaze, basin surfaces, and shower/faucet finishes over years of daily use.
+                Routine care helps preserve mirror clarity, sanitaryware glaze, basin surfaces, and shower/faucet finishes over years of daily use.
               </p>
               <div class="video-footer">
                 <span class="video-caption-note">Roca &amp; Parryware West Bengal Care</span>
@@ -883,25 +872,16 @@
 
           <article class="video-card">
             <div class="video-frame-wrap">
-              <video
-                class="showcase-video short-reel"
-                src="./video_2.mp4"
-                data-short-loop="10"
-                autoplay
-                muted
-                loop
-                playsinline
-                controls
-                preload="metadata"
-              >
-                Your browser does not support HTML5 video.
+              <video class="showcase-video" width="100%" autoplay muted loop playsinline>
+                <source src="./video_2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
               </video>
             </div>
             <div class="video-body">
-              <span class="video-tag">Short Reel · Everyday Living</span>
+              <span class="video-tag">Everyday Living &amp; Renovation</span>
               <div class="video-title">Smooth Flow &amp; Welcoming Home Spaces</div>
               <p class="video-desc">
-                A short glimpse of crisp basin mixers, morning routines, and clean, well-kept bathroom spaces designed for modern homes.
+                Crisp basin mixers, morning routines, and clean, well-kept bathroom spaces designed for modern homes.
               </p>
               <div class="video-footer">
                 <span class="video-caption-note">Showroom &amp; Renovation Guidance</span>
@@ -1190,22 +1170,6 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Short-form reel loop handler for autoplay showcase videos
-    document.querySelectorAll("video.short-reel").forEach((vid) => {
-      const maxShortSeconds = Number(vid.getAttribute("data-short-loop")) || 10;
-      vid.muted = true;
-      vid.play().catch(() => {});
-
-      vid.addEventListener("timeupdate", () => {
-        if (vid.currentTime >= maxShortSeconds) {
-          vid.currentTime = 0;
-          if (vid.paused) {
-            vid.play().catch(() => {});
-          }
-        }
-      });
-    });
 
     const STORAGE_KEY = "bathkit_catalogue_draft_v1";
 
