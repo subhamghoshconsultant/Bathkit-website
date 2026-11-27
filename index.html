@@ -62,34 +62,10 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      min-height: 98px;
+      min-height: 84px;
       gap: 16px;
       flex-wrap: wrap;
       padding: 10px 0;
-    }
-
-    .brand-wrap {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-
-    .brand-logo-link {
-      display: inline-flex;
-      align-items: center;
-      background: var(--surface);
-      padding: 10px 20px;
-      border-radius: 12px;
-      border: 2px solid var(--accent);
-      box-shadow: 0 6px 18px rgba(37, 65, 178, 0.14);
-    }
-
-    .brand-logo-img {
-      height: 82px;
-      width: auto;
-      max-width: 320px;
-      object-fit: contain;
-      display: block;
     }
 
     .brand-meta {
@@ -222,12 +198,6 @@
       margin-bottom: 22px;
     }
 
-    .top-banner-content .badge {
-      background: rgba(224, 231, 255, 0.92);
-      color: var(--accent-dark);
-      border-color: #ffffff;
-    }
-
     .top-banner-content .btn-outline {
       background: rgba(255, 255, 255, 0.12);
       color: #ffffff;
@@ -251,17 +221,6 @@
       gap: 10px;
       flex-wrap: wrap;
       margin-bottom: 14px;
-    }
-
-    .badge {
-      display: inline-block;
-      background: var(--accent-soft);
-      color: var(--accent-dark);
-      font-size: 0.82rem;
-      font-weight: 700;
-      padding: 5px 12px;
-      border-radius: 999px;
-      border: 1px solid var(--accent-light);
     }
 
     .rating-pill {
@@ -673,11 +632,6 @@
         display: none;
       }
 
-      .brand-logo-img {
-        height: 62px;
-        max-width: 245px;
-      }
-
       .top-video-banner {
         height: 360px;
       }
@@ -687,20 +641,9 @@
 <body>
   <header>
     <div class="container nav-inner">
-      <div class="brand-wrap">
-        <a href="#" class="brand-logo-link" aria-label="Bathkit Home">
-          <img
-            src="./BathkitLogo.png"
-            alt="Bathkit — Unit of Parry's Care Logo"
-            class="brand-logo-img"
-            onerror="this.style.display='none'; document.getElementById('fallbackBrandText').style.display='inline';"
-          />
-          <span id="fallbackBrandText" class="brand" style="display:none;">Bathkit</span>
-        </a>
-        <div class="brand-meta">
-          <span class="brand">Bathkit</span>
-          <span class="brand-sub">A Unit of Parry's Care · Kalikapur Branch</span>
-        </div>
+      <div class="brand-meta">
+        <a href="#" class="brand">Bathkit</a>
+        <span class="brand-sub">A Unit of Parry's Care · Kalikapur Branch</span>
       </div>
       <nav aria-label="Primary Navigation">
         <a href="#brands">Brands</a>
@@ -729,7 +672,7 @@
         loop
         playsinline
         preload="auto"
-        poster="./BathkitLogo.png"
+        poster="https://image.made-in-china.com/202f0j00IJRWsTNyPAqd/Sanitary-Ware-Modern-Bathroom-Waterfall-Single-Handle-Brass-Chrome-Wash-Basin-Faucet.webp"
       >
         <source src="./download%20(12).mp4" type="video/mp4" />
         Your browser does not support the video tag.
@@ -737,7 +680,6 @@
       <div class="top-banner-overlay">
         <div class="container top-banner-content">
           <div class="badge-row">
-            <span class="badge">A Unit of Parry's Care · Haltu, Kolkata</span>
             <span class="rating-pill" aria-label="4.9 out of 5 stars based on 213 Google reviews">
               &#9733; 4.9 / 5 Rating (213 Reviews)
             </span>
@@ -765,7 +707,6 @@
     <section class="hero">
       <div class="container">
         <div class="badge-row">
-          <span class="badge">A Unit of Parry's Care · Haltu, Kolkata</span>
           <span class="rating-pill" aria-label="4.9 out of 5 stars based on 213 Google reviews">
             &#9733; 4.9 / 5 Rating (213 Reviews)
           </span>
@@ -892,32 +833,32 @@
       <div class="container">
         <h2 class="section-title">Care &amp; Everyday Bathroom Living</h2>
         <p class="section-sub">
-          Showroom highlights and routine care guidance without duplicating the top banner video.
+          Bathroom fixtures, basin mixers, shower setups, and sanitation equipment suited for everyday home living and care.
         </p>
         <div class="grid-2">
           <article class="card">
             <img
-              src="./image%20(11).png"
-              alt="Bathkit Showroom & Bathroom Fixtures"
+              src="https://image.made-in-china.com/202f0j00IJRWsTNyPAqd/Sanitary-Ware-Modern-Bathroom-Waterfall-Single-Handle-Brass-Chrome-Wash-Basin-Faucet.webp"
+              alt="Chrome basin mixer tap and ceramic wash basin sanitation equipment"
               class="showcase-img"
-              onerror="this.style.display='none';"
+              loading="lazy"
             />
-            <h3>Showroom &amp; Fixture Selection</h3>
+            <h3>Basin Mixers &amp; Sanitaryware Selection</h3>
             <p style="margin-bottom: 14px;">
-              Compare basin mixers, showers, and sanitaryware finishes in person at our Haltu showroom to match your water flow and layout needs.
+              Compare basin faucets, ceramic wash basins, and water-saving sanitary fittings designed for smooth daily flow and clean, well-kept bathroom spaces.
             </p>
             <a href="#catalogue" class="btn btn-sm btn-outline">Explore Catalogue</a>
           </article>
           <article class="card">
             <img
-              src="./Untitled%20design%20(30).png"
-              alt="Care & Maintenance Support"
+              src="https://bassino.in/cdn/shop/files/Matte_Black_Rain_Shower_System_with_Hand_Shower1_1200x1200.png?v=1781789646"
+              alt="Shower system and bathroom fittings for everyday care and maintenance"
               class="showcase-img"
-              onerror="this.style.display='none';"
+              loading="lazy"
             />
-            <h3>Care &amp; Maintenance Support</h3>
+            <h3>Showers, Fittings &amp; Care Support</h3>
             <p style="margin-bottom: 14px;">
-              Routine care helps preserve mirror clarity, sanitaryware glaze, basin surfaces, and shower/faucet finishes over years of daily use. Our team assists with authorised Roca and Parryware service across West Bengal.
+              Routine care helps preserve sanitaryware glaze, basin surfaces, and shower or faucet finishes over years of daily use, backed by authorised Roca and Parryware support across West Bengal.
             </p>
             <a href="#booking" class="btn btn-sm">Book Service Visit</a>
           </article>
