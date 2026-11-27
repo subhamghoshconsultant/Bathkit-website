@@ -175,6 +175,70 @@
       border-color: var(--accent-dark);
     }
 
+    /* Top Autoplay Video Banner */
+    .top-video-banner {
+      position: relative;
+      width: 100%;
+      height: 520px;
+      overflow: hidden;
+      background: #0f172a;
+      border-bottom: 2px solid var(--accent);
+    }
+
+    .top-banner-video {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .top-banner-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(
+        90deg,
+        rgba(15, 23, 42, 0.82) 0%,
+        rgba(15, 23, 42, 0.52) 58%,
+        rgba(15, 23, 42, 0.25) 100%
+      );
+    }
+
+    .top-banner-content {
+      width: 100%;
+      color: #ffffff;
+    }
+
+    .top-banner-content h1 {
+      color: #ffffff;
+      margin-bottom: 14px;
+    }
+
+    .top-banner-content p {
+      color: #e2e8f0;
+      font-size: 1.05rem;
+      max-width: 720px;
+      margin-bottom: 22px;
+    }
+
+    .top-banner-content .badge {
+      background: rgba(224, 231, 255, 0.92);
+      color: var(--accent-dark);
+      border-color: #ffffff;
+    }
+
+    .top-banner-content .btn-outline {
+      background: rgba(255, 255, 255, 0.12);
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.7);
+    }
+
+    .top-banner-content .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.24);
+      color: #ffffff;
+    }
+
     /* Hero */
     .hero {
       padding: 54px 0 44px;
@@ -319,6 +383,7 @@
 
     .showcase-video {
       display: block;
+      width: 100%;
       aspect-ratio: 16 / 9;
       object-fit: cover;
       background: var(--surface-alt);
@@ -679,6 +744,10 @@
         height: 62px;
         max-width: 245px;
       }
+
+      .top-video-banner {
+        height: 360px;
+      }
     }
   </style>
 </head>
@@ -717,6 +786,40 @@
   </header>
 
   <main>
+    <!-- Top Autoplay Video Banner (Placed First in Main) -->
+    <div class="top-video-banner" role="region" aria-label="Bathkit Autoplay Video Banner">
+      <video class="top-banner-video" autoplay muted loop playsinline preload="metadata">
+        <source src="./video_1.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="top-banner-overlay">
+        <div class="container top-banner-content">
+          <div class="badge-row">
+            <span class="badge">A Unit of Parry's Care · Haltu, Kolkata</span>
+            <span class="rating-pill" aria-label="4.9 out of 5 stars based on 213 Google reviews">
+              &#9733; 4.9 / 5 Rating (213 Reviews)
+            </span>
+          </div>
+          <h1>Branded Bathroom Fittings, Sanitaryware &amp; Authorised Care</h1>
+          <p>
+            Distributors of <strong>Roca</strong> and <strong>Parryware</strong>, plus authorised West Bengal customer care, bathroom renovations, and bulk/project supply in Haltu, Kolkata.
+          </p>
+          <div class="hero-actions">
+            <a href="#booking" class="btn">Book Showroom / Service Visit</a>
+            <a href="#catalogue" class="btn btn-outline">Browse Catalogue</a>
+            <a
+              href="https://wa.me/918697931751?text=Hello%20Bathkit%20(Parry's%20Care)%2C%20I%20would%20like%20to%20enquire%20about%20fittings%2C%20sanitaryware%2C%20renovation%2C%20or%20bulk%20order."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-wa"
+            >
+              Bathkit WhatsApp Contact
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <section class="hero">
       <div class="container">
         <div class="badge-row">
@@ -725,14 +828,19 @@
             &#9733; 4.9 / 5 Rating (213 Reviews)
           </span>
         </div>
-        <h1>Branded Bathroom Fittings, Sanitaryware &amp; Authorised Care</h1>
+        <h2>Branded Bathroom Fittings, Sanitaryware &amp; Authorised Care</h2>
         <p>
           <strong>Bathkit</strong> is a unit of <strong>Parry's Care</strong>, serving as distributors of <strong>Roca</strong> and <strong>Parryware</strong> and offering an extensive collection of branded bathroom fittings, sanitaryware, bathroom renovations, bulk order supply, and authorised customer care across West Bengal. Please feel free to visit our showroom.
         </p>
         <div class="hero-actions">
           <a href="#booking" class="btn">Book Showroom / Service Visit</a>
           <a href="#catalogue" class="btn btn-outline">Browse Catalogue</a>
-          <a href="https://wa.me/918697931751?text=Hello%20Bathkit%20(Parry's%20Care)%2C%20I%20would%20like%20to%20enquire%20about%20fittings%2C%20sanitaryware%2C%20renovation%2C%20or%20bulk%20order." target="_blank" rel="noopener noreferrer" class="btn btn-wa">
+          <a
+            href="https://wa.me/918697931751?text=Hello%20Bathkit%20(Parry's%20Care)%2C%20I%20would%20like%20to%20enquire%20about%20fittings%2C%20sanitaryware%2C%20renovation%2C%20or%20bulk%20order."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-wa"
+          >
             Bathkit WhatsApp Contact
           </a>
         </div>
@@ -759,7 +867,6 @@
               <div class="brand-tag">Distributor &amp; WB Auth. Care</div>
             </div>
           </div>
-
           <div class="brand-card">
             <div class="brand-logo-box">
               <img
@@ -775,7 +882,6 @@
               <div class="brand-tag">Distributor &amp; WB Auth. Care</div>
             </div>
           </div>
-
           <div class="brand-card">
             <div class="brand-logo-box">
               <img
@@ -791,7 +897,6 @@
               <div class="brand-tag">Bathroom Fittings</div>
             </div>
           </div>
-
           <div class="brand-card">
             <div class="brand-logo-box">
               <img
@@ -807,7 +912,6 @@
               <div class="brand-tag">Bathroom Fittings</div>
             </div>
           </div>
-
           <div class="brand-card">
             <div class="brand-logo-box">
               <img
@@ -823,7 +927,6 @@
               <div class="brand-tag">Fittings &amp; Sanitaryware</div>
             </div>
           </div>
-
           <div class="brand-card">
             <div class="brand-logo-box">
               <svg class="brand-svg-logo" viewBox="0 0 180 56" role="img" aria-label="Jayna Logo">
@@ -847,33 +950,13 @@
       <div class="container">
         <h2 class="section-title">Care &amp; Everyday Bathroom Living</h2>
         <p class="section-sub">
-          Autoplay videos highlighting regular upkeep for mirrors, sanitaryware, and mixers—and how quality fittings support everyday home routines.
+          Video highlights on everyday bathroom spaces, fixtures, and renovation guidance (duplicate banner video removed).
         </p>
         <div class="grid-2">
           <article class="video-card">
             <div class="video-frame-wrap">
               <video class="showcase-video" width="100%" autoplay muted loop playsinline>
-                <source src="./video_1.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-            <div class="video-body">
-              <span class="video-tag">Care &amp; Maintenance</span>
-              <div class="video-title">&ldquo;Everything worth keeping requires maintenance.&rdquo;</div>
-              <p class="video-desc">
-                Routine care helps preserve mirror clarity, sanitaryware glaze, basin surfaces, and shower/faucet finishes over years of daily use.
-              </p>
-              <div class="video-footer">
-                <span class="video-caption-note">Roca &amp; Parryware West Bengal Care</span>
-                <a href="#booking" class="btn btn-sm">Book Service Visit</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="video-card">
-            <div class="video-frame-wrap">
-              <video class="showcase-video" width="100%" autoplay muted loop playsinline>
-                <source src="./video_2.mp4" type="video/mp4">
+                <source src="./video_2.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
@@ -889,6 +972,13 @@
               </div>
             </div>
           </article>
+          <article class="card">
+            <h3>Care &amp; Maintenance Support</h3>
+            <p style="margin-bottom: 14px;">
+              Routine care helps preserve mirror clarity, sanitaryware glaze, basin surfaces, and shower/faucet finishes over years of daily use. Our team assists with authorised Roca and Parryware service across West Bengal.
+            </p>
+            <a href="#booking" class="btn btn-sm">Book Service Visit</a>
+          </article>
         </div>
       </div>
     </section>
@@ -899,14 +989,12 @@
         <p class="section-sub">
           Sample mock catalogue items are shown below—filter by category, click <strong>Enquire / Book</strong> to pre-fill the booking form, or use the builder box below to add new items later.
         </p>
-
         <div class="filter-bar" role="group" aria-label="Filter catalogue by category">
           <button type="button" class="filter-btn active" data-filter="All">All Items</button>
           <button type="button" class="filter-btn" data-filter="Sanitaryware">Sanitaryware</button>
           <button type="button" class="filter-btn" data-filter="Showers &amp; Fittings">Showers &amp; Fittings</button>
           <button type="button" class="filter-btn" data-filter="Renovation">Renovation</button>
         </div>
-
         <div id="catalogueGrid" class="grid-3"></div>
 
         <!-- Future Catalogue Expansion / Addition Space -->
@@ -972,7 +1060,6 @@
         <p class="section-sub">
           Schedule a showroom consultation, bathroom renovation discussion, or Roca &amp; Parryware customer care request at Haltu, Kolkata.
         </p>
-
         <div class="grid-2">
           <div class="card">
             <h3>Appointment &amp; Service Booking Form</h3>
@@ -1012,7 +1099,6 @@
             </form>
             <div id="bookingStatus" class="status-box"></div>
           </div>
-
           <div class="card">
             <h3>What to Expect When You Book</h3>
             <ul class="info-list" style="margin-top: 12px;">
@@ -1044,7 +1130,6 @@
         <p class="section-sub">
           Dedicated contact channels for bulk order stock requirements and builder/commercial project requirements.
         </p>
-
         <div class="grid-2">
           <div class="card">
             <h3>Bulk Order Enquiry</h3>
@@ -1056,7 +1141,6 @@
               <a href="tel:03340011140" class="btn">Call 033 4001 1140</a>
             </div>
           </div>
-
           <div class="card">
             <h3>Project Enquiry</h3>
             <p>
@@ -1065,7 +1149,14 @@
             <a href="tel:8697931751" class="enquiry-number">8697931751</a>
             <div class="hero-actions">
               <a href="tel:8697931751" class="btn">Call 8697931751</a>
-              <a href="https://wa.me/918697931751?text=Hello%20Bathkit%2C%20I%20have%20a%20project%20enquiry." target="_blank" rel="noopener noreferrer" class="btn btn-wa btn-sm">Bathkit Project WhatsApp</a>
+              <a
+                href="https://wa.me/918697931751?text=Hello%20Bathkit%2C%20I%20have%20a%20project%20enquiry."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-wa btn-sm"
+              >
+                Bathkit Project WhatsApp
+              </a>
             </div>
           </div>
         </div>
@@ -1077,7 +1168,12 @@
         <h2 class="section-title">Customer Ratings &amp; Reviews</h2>
         <p class="section-sub">
           Rated <strong>4.9 / 5</strong> across <strong>213 reviews</strong> for Bathkit A unit of Parryscare Kalikapur Branch:
-          <a href="https://www.google.com/maps/search/?api=1&query=202,+Purbachal+Main+Rd,+Sukhpally,+Haltu,+Kolkata,+West+Bengal+700078" target="_blank" rel="noopener noreferrer" class="link-inline">
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=202,+Purbachal+Main+Rd,+Sukhpally,+Haltu,+Kolkata,+West+Bengal+700078"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link-inline"
+          >
             View on Google Maps
           </a>
         </p>
@@ -1124,7 +1220,12 @@
               </li>
               <li>
                 <span class="info-label">WhatsApp</span>
-                <a href="https://wa.me/918697931751?text=Hello%20Bathkit%2C%20I%20would%20like%20to%20connect%20with%20your%20showroom." target="_blank" rel="noopener noreferrer" class="link-inline">
+                <a
+                  href="https://wa.me/918697931751?text=Hello%20Bathkit%2C%20I%20would%20like%20to%20connect%20with%20your%20showroom."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="link-inline"
+                >
                   Bathkit WhatsApp Contact
                 </a>
               </li>
@@ -1144,10 +1245,20 @@
               Bathkit A unit of Parryscare (Kalikapur Branch) is located at 202, Purbachal Main Rd, Sukhpally, Haltu, Kolkata, West Bengal 700078, India. Open until 8:00 PM for retail, bulk order supply, project supply, renovation queries, and Roca &amp; Parryware support.
             </p>
             <div class="hero-actions">
-              <a class="btn" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=202,+Purbachal+Main+Rd,+Sukhpally,+Haltu,+Kolkata,+West+Bengal+700078">
+              <a
+                class="btn"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.google.com/maps/search/?api=1&query=202,+Purbachal+Main+Rd,+Sukhpally,+Haltu,+Kolkata,+West+Bengal+700078"
+              >
                 Open in Google Maps
               </a>
-              <a class="btn btn-wa" target="_blank" rel="noopener noreferrer" href="https://wa.me/918697931751?text=Hello%20Bathkit%2C%20I%20would%20like%20to%20visit%20or%20enquire%20about%20products.">
+              <a
+                class="btn btn-wa"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://wa.me/918697931751?text=Hello%20Bathkit%2C%20I%20would%20like%20to%20visit%20or%20enquire%20about%20products."
+              >
                 Bathkit WhatsApp Contact
               </a>
             </div>
@@ -1252,7 +1363,6 @@
 
     let catalogueItems = loadSavedCatalogue();
     let activeFilter = "All";
-
     const catalogueGrid = document.getElementById("catalogueGrid");
     const catalogueStatus = document.getElementById("catalogueStatus");
 
@@ -1292,9 +1402,7 @@
           const itemName = btn.getAttribute("data-item-title");
           const notes = document.getElementById("bookNotes");
           if (!notes.value.includes(itemName)) {
-            notes.value = notes.value
-              ? `${notes.value} | Interested in: ${itemName}`
-              : `Interested in: ${itemName}`;
+            notes.value = notes.value ? `${notes.value} | Interested in: ${itemName}` : `Interested in: ${itemName}`;
           }
           document.getElementById("booking").scrollIntoView({ behavior: "smooth" });
         });
@@ -1319,17 +1427,7 @@
       const imageInput = document.getElementById("catImage").value.trim();
       const image = imageInput || "https://image.made-in-china.com/202f0j00IJRWsTNyPAqd/Sanitary-Ware-Modern-Bathroom-Waterfall-Single-Handle-Brass-Chrome-Wash-Basin-Faucet.webp";
       const description = document.getElementById("catDesc").value.trim();
-
-      const newItem = {
-        id: `BK-${100 + catalogueItems.length + 1}`,
-        title,
-        brand,
-        category,
-        price,
-        image,
-        description
-      };
-
+      const newItem = { id: `BK-${100 + catalogueItems.length + 1}`, title, brand, category, price, image, description };
       catalogueItems.push(newItem);
       saveCatalogue();
       activeFilter = "All";
@@ -1338,7 +1436,6 @@
       });
       renderCatalogue();
       e.target.reset();
-
       catalogueStatus.style.display = "block";
       catalogueStatus.textContent = `Added "${newItem.title}" (${newItem.id}) to the preview catalogue.`;
     });
